@@ -1,0 +1,3774 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192" href="http://bkstore.highline.edu/mobile/images/hbicon.png">
+<title>Highline Bookstore</title>
+<link href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+<script src="http://bkstore.highline.edu/mobile/js/iscroll.js" type="text/javascript"></script>
+<script type="text/javascript">
+var myScroll;
+function loaded() {
+    myScroll = new IScroll('#wrapper');
+}
+</script>
+</head>
+<body>
+<script>
+var info = [
+  {
+	"Book":"1",
+    "Course":"ACCTG 217 - 2047",
+    "ISBN":"9780133771473",
+    "Title":"PRENTICE-HALL'S FED.TAX.2",
+    "New Rental Price":"$13.20",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"2",
+    "Course":"ACCTG 217 - 2047",
+    "ISBN":"9780133813074",
+    "Title":"PRENTICE-HALL'S FED..2015",
+    "New Rental Price":"$112.20",
+    "Used Rental Price":"$84.26",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"3",
+    "Course":"ANTH&amp; 100 - 1259",
+    "ISBN":"9780500251942",
+    "Title":"VIKING",
+    "New Rental Price":"$15.87",
+    "Used Rental Price":"$11.32",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"4",
+    "Course":"ANTH&amp; 100 - 1259",
+    "ISBN":"9781598744149",
+    "Title":"NEW HUMAN",
+    "New Rental Price":"$21.96",
+    "Used Rental Price":"$16.50",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"5",
+    "Course":"ANTH&amp; 205- 1265",
+    "ISBN":"9780385479684",
+    "Title":"DEAD MEN DO TELL TALES",
+    "New Rental Price":"$14.04",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"6",
+    "Course":"ANTH&amp; 206 - 1266",
+    "ISBN":"9780078035005",
+    "Title":"CULTURAL ANTHROPOLOGY",
+    "New Rental Price":"$187.88",
+    "Used Rental Price":"$141.02",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"7",
+    "Course":"ANTH&amp; 206 - 1267",
+    "ISBN":"9780684855103",
+    "Title":"NOBLE SAVAGES",
+    "New Rental Price":"$28.60",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"8",
+    "Course":"ARAB 122 - 5252",
+    "ISBN":"9780300141313",
+    "Title":"ARABIC FOR LIFE (W/DVD)",
+    "New Rental Price":"$56.55",
+    "Used Rental Price":"$39.25",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"9",
+    "Course":"ART 125 - 5095",
+    "ISBN":"9780316373050",
+    "Title":"BLACK &amp; WHITE PHOTOGRAPHY",
+    "New Rental Price":"$10.55",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"10",
+    "Course":"ART 128 - 5097",
+    "ISBN":"9780471464341",
+    "Title":"HISTORY OF INTERIOR DESIG",
+    "New Rental Price":"$79.20",
+    "Used Rental Price":"$13.20",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"11",
+    "Course":"ART 147 - 5101",
+    "ISBN":"9780817439392",
+    "Title":"UNDERSTANDING EXPOSURE",
+    "New Rental Price":"$14.36",
+    "Used Rental Price":"$10.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"12",
+    "Course":"ART 147 - 5101",
+    "ISBN":"9781603201278",
+    "Title":"LIFE GUIDE TO DIGITAL PHO",
+    "New Rental Price":"$22.40",
+    "Used Rental Price":"$16.94",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"13",
+    "Course":"ART 147 - 5103",
+    "ISBN":"9780817439392",
+    "Title":"UNDERSTANDING EXPOSURE",
+    "New Rental Price":"$14.36",
+    "Used Rental Price":"$10.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"14",
+    "Course":"ART 147 - 5103",
+    "ISBN":"9781603201278",
+    "Title":"LIFE GUIDE TO DIGITAL PHO",
+    "New Rental Price":"$22.40",
+    "Used Rental Price":"$16.94",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"15",
+    "Course":"ART&amp; 100 - ALL",
+    "ISBN":"9781111836955",
+    "Title":"UNDERSTANDING ART -W/ACCE",
+    "New Rental Price":"$138.29",
+    "Used Rental Price":"$93.09",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"16",
+    "Course":"ASL&amp; 121 -5253",
+    "ISBN":"9780199777549",
+    "Title":"INTRO.TO AMERICAN DEAF CU",
+    "New Rental Price":"$33.88",
+    "Used Rental Price":"$22.66",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"17",
+    "Course":"ASL&amp; 122 - ALL",
+    "ISBN":"9780199777549",
+    "Title":"INTRO.TO AMERICAN DEAF CU",
+    "New Rental Price":"$33.88",
+    "Used Rental Price":"$22.66",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"18",
+    "Course":"ASTR&amp; 100 - ALL",
+    "ISBN":"9780321928085",
+    "Title":"ESSENTIAL COSMIC PERSPECT",
+    "New Rental Price":"$102.54",
+    "Used Rental Price":"$69.01",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"19",
+    "Course":"BIOL 110 - 6001",
+    "ISBN":"9780073524207",
+    "Title":"MARINE BIOLOGY",
+    "New Rental Price":"$117.02",
+    "Used Rental Price":"$68.83",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"20",
+    "Course":"BIOL 110 - 6001",
+    "ISBN":"9781550174915",
+    "Title":"WHELKS TO WHALES",
+    "New Rental Price":"$19.40",
+    "Used Rental Price":"$12.93",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"21",
+    "Course":"BIOL 110 - 6002",
+    "ISBN":"9780878936021",
+    "Title":"OCEANGRAPHY &amp; MARINE BIOL",
+    "New Rental Price":"$81.22",
+    "Used Rental Price":"$55.50",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"22",
+    "Course":"BIOL 110 - 6002",
+    "ISBN":"9781550174915",
+    "Title":"WHELKS TO WHALES",
+    "New Rental Price":"$19.40",
+    "Used Rental Price":"$12.93",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"23",
+    "Course":"BIOL 121 - 6003",
+    "ISBN":"9780538733212",
+    "Title":"HUMAN GENETICS+SOCIETY",
+    "New Rental Price":"$94.58",
+    "Used Rental Price":"$66.29",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"24",
+    "Course":"BIOL&amp; 100 - 6011",
+    "ISBN":"9781429223188",
+    "Title":"WHAT IS LIFE? GUIDE TO BI",
+    "New Rental Price":"$116.82",
+    "Used Rental Price":"$87.78",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"25",
+    "Course":"BIOL&amp; 175 - ALL",
+    "ISBN":"9780321947918",
+    "Title":"ESSEN.OF HUMAN ANAT.+PHYS",
+    "New Rental Price":"$44.85",
+    "Used Rental Price":"$30.82",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"26",
+    "Course":"BIOL&amp; 211 - ALL",
+    "ISBN":"9781133587552",
+    "Title":"BIOLOGY:DYNAMIC SCIENCE",
+    "New Rental Price":"$211.60",
+    "Used Rental Price":"$150.42",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"27",
+    "Course":"BIOL&amp; 212 - ALL",
+    "ISBN":"9781133587552",
+    "Title":"BIOLOGY:DYNAMIC SCIENCE",
+    "New Rental Price":"$211.60",
+    "Used Rental Price":"$150.42",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"28",
+    "Course":"BIOL&amp; 241 - ALL",
+    "ISBN":"9780321743268",
+    "Title":"HUMAN ANAT &amp; PHYS BOOK",
+    "New Rental Price":"$177.15",
+    "Used Rental Price":"$92.30",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"29",
+    "Course":"BIOL&amp; 242 - ALL",
+    "ISBN":"9780321743268",
+    "Title":"HUMAN ANAT &amp; PHYS BOOK",
+    "New Rental Price":"$177.15",
+    "Used Rental Price":"$92.30",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"30",
+    "Course":"BIOL&amp; 260 - ALL",
+    "ISBN":"9780073402413",
+    "Title":"BENSON'S MICROBIOLOGICAL",
+    "New Rental Price":"$79.95",
+    "Used Rental Price":"$54.51",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"31",
+    "Course":"BIOL&amp; 260 - ALL",
+    "ISBN":"9780805327328",
+    "Title":"MICROBIOLOGY:PHOTOGRAPHIC",
+    "New Rental Price":"$41.12",
+    "Used Rental Price":"$29.16",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"32",
+    "Course":"BTECH 103 - ALL",
+    "ISBN":"9780077824631",
+    "Title":"GREGG..KEYBRD.+DOC.PROC.W",
+    "New Rental Price":"$119.37",
+    "Used Rental Price":"$82.39",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"33",
+    "Course":"BTECH 103 - ALL",
+    "ISBN":"9780077825737",
+    "Title":"COLLEGE KEYBOARDING ETC (",
+    "New Rental Price":"$184.47",
+    "Used Rental Price":"$126.97",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"34",
+    "Course":"BTECH 106 - ALL",
+    "ISBN":"9780077819262",
+    "Title":"GREGG COLL.KEYBOARD...LES",
+    "New Rental Price":"$119.01",
+    "Used Rental Price":"$82.39",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"35",
+    "Course":"BTECH 106 - ALL",
+    "ISBN":"9780077825737",
+    "Title":"COLLEGE KEYBOARDING ETC (",
+    "New Rental Price":"$184.47",
+    "Used Rental Price":"$126.97",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"36",
+    "Course":"BTECH 112 - ALL",
+    "ISBN":"9780538750981",
+    "Title":"INTERNET:ILLUSTRATED INTR",
+    "New Rental Price":"$91.96",
+    "Used Rental Price":"$46.60",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"37",
+    "Course":"BTECH 114 - ALL",
+    "ISBN":"9781285161822",
+    "Title":"MICROSOFT POWERPOINT 2013",
+    "New Rental Price":"$85.43",
+    "Used Rental Price":"$50.70",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"38",
+    "Course":"BTECH 118 - ALL",
+    "ISBN":"9781285168876",
+    "Title":"MICROSOFT OUTLOOK 2013",
+    "New Rental Price":"$79.90",
+    "Used Rental Price":"$56.35",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"39",
+    "Course":"BTECH 139 - ALL",
+    "ISBN":"9781111572310",
+    "Title":"YOUR CAREER:HOW TO MAKE I",
+    "New Rental Price":"$86.94",
+    "Used Rental Price":"$61.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"40",
+    "Course":"BTECH 151 - ALL",
+    "ISBN":"9781305118713",
+    "Title":"ADOBE DREAMWEAVER CREATIV",
+    "New Rental Price":"$67.54",
+    "Used Rental Price":"$45.53",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"41",
+    "Course":"BTECH 226 - ALL",
+    "ISBN":"9781285099217",
+    "Title":"MICROSOFT ACCESS 2013,INT",
+    "New Rental Price":"$74.10",
+    "Used Rental Price":"$48.73",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"42",
+    "Course":"BTECH 250 - ALL",
+    "ISBN":"9781285068374",
+    "Title":"SUCCESSFUL PROJECT MANAGE",
+    "New Rental Price":"$102.60",
+    "Used Rental Price":"$76.95",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"43",
+    "Course":"BTECH 251 - ALL",
+    "ISBN":"9781305118713",
+    "Title":"ADOBE DREAMWEAVER CREATIV",
+    "New Rental Price":"$67.54",
+    "Used Rental Price":"$45.53",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"44",
+    "Course":"BTECH 254 - ALL",
+    "ISBN":"9780538731089",
+    "Title":"HUMAN RELATIONS",
+    "New Rental Price":"$123.20",
+    "Used Rental Price":"$45.25",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"45",
+    "Course":"BTECH 256 - 2381",
+    "ISBN":"9781454816454",
+    "Title":"BASIC CONTRACT LAW FOR PA",
+    "New Rental Price":"$94.35",
+    "Used Rental Price":"$67.28",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"46",
+    "Course":"BTECH 260 - 9145",
+    "ISBN":"9780735669116",
+    "Title":"MICROSOFT PROJECT 2013 ST",
+    "New Rental Price":"$19.49",
+    "Used Rental Price":"$13.73",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"47",
+    "Course":"BTECH YWCA - ALL",
+    "ISBN":"9780077319366",
+    "Title":"GREGG..KEYBRD.+DOC.PROC.L",
+    "New Rental Price":"$103.62",
+    "Used Rental Price":"$52.80",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"48",
+    "Course":"BTECH YWCA - ALL",
+    "ISBN":"9780538749053",
+    "Title":"MICROSOFT WINDOWS 7 ILLUS",
+    "New Rental Price":"$35.83",
+    "Used Rental Price":"$25.97",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"49",
+    "Course":"BTECH YWCA - ALL",
+    "ISBN":"9780538750981",
+    "Title":"INTERNET:ILLUSTRATED INTR",
+    "New Rental Price":"$91.96",
+    "Used Rental Price":"$46.60",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"50",
+    "Course":"BTECH YWCA - ALL",
+    "ISBN":"9780538753906",
+    "Title":"COMPUTER CONCEPT ILLUSTRA",
+    "New Rental Price":"$19.14",
+    "Used Rental Price":"$14.52",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"51",
+    "Course":"BUS&amp; 101 - 2067",
+    "ISBN":"9780078023156",
+    "Title":"BUSINESS (M SERIES)",
+    "New Rental Price":"$45.00",
+    "Used Rental Price":"$35.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"52",
+    "Course":"BUS&amp; 101 - 2068",
+    "ISBN":"9780078023156",
+    "Title":"BUSINESS (M SERIES)",
+    "New Rental Price":"$45.00",
+    "Used Rental Price":"$35.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"53",
+    "Course":"BUS&amp; 101 - 2069",
+    "ISBN":"9780078023156",
+    "Title":"BUSINESS (M SERIES)",
+    "New Rental Price":"$45.00",
+    "Used Rental Price":"$35.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"54",
+    "Course":"BUSN 105 - ALL",
+    "ISBN":"9780989490603",
+    "Title":"INTERNATIONAL LOGISTICS",
+    "New Rental Price":"$50.98",
+    "Used Rental Price":"$37.19",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"55",
+    "Course":"BUSN 105 - ALL",
+    "ISBN":"9781618408754",
+    "Title":"DICTIONARY OF INTERNATION",
+    "New Rental Price":"$66.00",
+    "Used Rental Price":"$49.50",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"56",
+    "Course":"BUSN 110 - 2649",
+    "ISBN":"9781439042311",
+    "Title":"BUSINESS+SOCIETY",
+    "New Rental Price":"$207.46",
+    "Used Rental Price":"$109.60",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"57",
+    "Course":"BUSN 125 - 2079",
+    "ISBN":"9781285425436",
+    "Title":"ELECTRONIC COMMERCE",
+    "New Rental Price":"$74.81",
+    "Used Rental Price":"$56.15",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"58",
+    "Course":"BUSN 133 - 2083",
+    "ISBN":"9780136063032",
+    "Title":"PERSONAL FINANCE",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$55.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"59",
+    "Course":"BUSN 135 - 2087",
+    "ISBN":"9780321937032",
+    "Title":"BUSINESS MATHEMATICS-W/AC",
+    "New Rental Price":"$180.66",
+    "Used Rental Price":"$126.84",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"60",
+    "Course":"BUSN 135 - 2091",
+    "ISBN":"9780321955050",
+    "Title":"BUSINESS MATHEMATICS",
+    "New Rental Price":"$167.78",
+    "Used Rental Price":"$117.18",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"61",
+    "Course":"BUSN 138 - 2093",
+    "ISBN":"9780077861025",
+    "Title":"MARKETING (M SERIES)",
+    "New Rental Price":"$51.84",
+    "Used Rental Price":"$34.50",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"62",
+    "Course":"BUSN 139 - 2095",
+    "ISBN":"9781111572310",
+    "Title":"YOUR CAREER:HOW TO MAKE I",
+    "New Rental Price":"$86.94",
+    "Used Rental Price":"$61.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"63",
+    "Course":"BUSN 155 - 2099",
+    "ISBN":"9781426630569",
+    "Title":"SMALL BUSINESS MGMT.:PLAN",
+    "New Rental Price":"$143.44",
+    "Used Rental Price":"$87.96",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"64",
+    "Course":"BUSN 160 - ALL",
+    "ISBN":"9780538731089",
+    "Title":"HUMAN RELATIONS",
+    "New Rental Price":"$123.20",
+    "Used Rental Price":"$45.25",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"65",
+    "Course":"BUSN 165 - ALL",
+    "ISBN":"9780073545462",
+    "Title":"CUSTOMER SERVICE",
+    "New Rental Price":"$70.00",
+    "Used Rental Price":"$50.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"66",
+    "Course":"BUSN 205 - 2121",
+    "ISBN":"9780133792355",
+    "Title":"*INTERNATIONAL BUSINESS 2",
+    "New Rental Price":"$145.86",
+    "Used Rental Price":"$109.56",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"67",
+    "Course":"BUSN 207 - ALL",
+    "ISBN":"9788763002387",
+    "Title":"CROSS CULTURAL BUSINESS B",
+    "New Rental Price":"$30.00",
+    "Used Rental Price":"$25.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"68",
+    "Course":"BUSN 210 - ALL",
+    "ISBN":"9781285433301",
+    "Title":"MODERN BUSINESS STAT.WITH",
+    "New Rental Price":"$173.02",
+    "Used Rental Price":"$117.42",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"69",
+    "Course":"BUSN 216 - 2137",
+    "ISBN":"9781285166025",
+    "Title":"MICROSOFT OFFICE 2013",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$68.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"70",
+    "Course":"BUSN 266 - 2151",
+    "ISBN":"9780538453158",
+    "Title":"HUMAN RESOURCE MANAGEMENT",
+    "New Rental Price":"$241.12",
+    "Used Rental Price":"$87.78",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"71",
+    "Course":"BUSN 270 -2155",
+    "ISBN":"9781111577520",
+    "Title":"MANAGEMENT FUND",
+    "New Rental Price":"$227.04",
+    "Used Rental Price":"$113.96",
+    "Availability":"In-store"
+  },
+
+  {
+    "Book":"72",
+    "Course":"C SCI 100 - ALL",
+    "ISBN":"9781285096926",
+    "Title":"COMPUTER CONCEPTS 2014,CO",
+    "New Rental Price":"$84.48",
+    "Used Rental Price":"$56.95",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"73",
+    "Course":"C SCI 102 - ALL",
+    "ISBN":"9781133526124",
+    "Title":"HTML,XHTML,AND CSS-COMPLE",
+    "New Rental Price":"$83.29",
+    "Used Rental Price":"$57.30",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"74",
+    "Course":"C SCI 112 - ALL",
+    "ISBN":"9781133693215",
+    "Title":"ADOBE FLASH CS6 REVEALED",
+    "New Rental Price":"$59.75",
+    "Used Rental Price":"$35.14",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"75",
+    "Course":"C SCI 121 - ALL",
+    "ISBN":"9780321564252",
+    "Title":"VISUAL QUICKSTART GDE.ACT",
+    "New Rental Price":"$26.17",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"76",
+    "Course":"C SCI 142 - ALL",
+    "ISBN":"9780321486127",
+    "Title":"ART &amp; SCIENCE OF JAVA",
+    "New Rental Price":"$107.14",
+    "Used Rental Price":"$54.46",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"77",
+    "Course":"C SCI 143 - 6129",
+    "ISBN":"9780132989961",
+    "Title":"ABSOLUTE JAVA (W/MYPROGRA",
+    "New Rental Price":"$150.92",
+    "Used Rental Price":"$113.30",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"78",
+    "Course":"C SCI 151 - 6131",
+    "ISBN":"9780132830713",
+    "Title":"ABSOLUTE C++",
+    "New Rental Price":"$128.59",
+    "Used Rental Price":"$91.10",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"79",
+    "Course":"C SCI 152 - 6133",
+    "ISBN":"9780132830713",
+    "Title":"ABSOLUTE C++",
+    "New Rental Price":"$128.59",
+    "Used Rental Price":"$91.10",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"80",
+    "Course":"C SCI 201 - 6135",
+    "ISBN":"9780321957610",
+    "Title":"WORDPRESS:VISUAL QUICKSTA",
+    "New Rental Price":"$17.74",
+    "Used Rental Price":"$12.22",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"81",
+    "Course":"C SCI 202 - 6137",
+    "ISBN":"9780133128918",
+    "Title":"BASICS OF WEB DESIGN-HTML",
+    "New Rental Price":"$72.04",
+    "Used Rental Price":"$40.14",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"82",
+    "Course":"C SCI 215 - 6141",
+    "ISBN":"9780321784070",
+    "Title":"PHP &amp; MYSQL FOR DYNAMIC W",
+    "New Rental Price":"$24.86",
+    "Used Rental Price":"$16.39",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"83",
+    "Course":"C SCI 215 - 6141",
+    "ISBN":"9780596101015",
+    "Title":"PHP COOKBOOK:SOLUTIONS &amp;",
+    "New Rental Price":"$39.59",
+    "Used Rental Price":"$18.44",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"84",
+    "Course":"CHEM&amp; 110 - ALL",
+    "ISBN":"9781429255226",
+    "Title":"INVESTIGATING CHEMISTRY",
+    "New Rental Price":"$60.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"85",
+    "Course":"CHEM&amp; 121 - ALL",
+    "ISBN":"9781133602279",
+    "Title":"CHEMISTRY F/TODAY:GEN.,OR",
+    "New Rental Price":"$175.17",
+    "Used Rental Price":"$91.06",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"86",
+    "Course":"CHEM&amp; 121 - ALL",
+    "ISBN":"9781285915210",
+    "Title":"CHEMISRTY FOR TODAY VOLU",
+    "New Rental Price":"$128.92",
+    "Used Rental Price":"$96.80",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"87",
+    "Course":"CHEM&amp; 131 - ALL",
+    "ISBN":"9781133602279",
+    "Title":"CHEMISTRY F/TODAY:GEN.,OR",
+    "New Rental Price":"$175.17",
+    "Used Rental Price":"$91.06",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"88",
+    "Course":"CHEM&amp; 161 - ALL",
+    "ISBN":"9780133905588",
+    "Title":"CHEMISTRY:CENTRAL SCIENCE",
+    "New Rental Price":"$163.31",
+    "Used Rental Price":"$117.42",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"89",
+    "Course":"CHEM&amp; 161 - ALL",
+    "ISBN":"9780321910417",
+    "Title":"CHEMISTRY",
+    "New Rental Price":"$159.93",
+    "Used Rental Price":"$113.71",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"90",
+    "Course":"CHEM&amp; 261 - 6215",
+    "ISBN":"9781285426501",
+    "Title":"ORGANIC CHEMISTRY,HYBRID",
+    "New Rental Price":"$171.38",
+    "Used Rental Price":"$128.70",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"91",
+    "Course":"CHEM&amp; 262 - ALL",
+    "ISBN":"9781285426501",
+    "Title":"ORGANIC CHEMISTRY,HYBRID",
+    "New Rental Price":"$171.38",
+    "Used Rental Price":"$128.70",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"92",
+    "Course":"CIS 160 - 6273",
+    "ISBN":"9781118789704",
+    "Title":"CCNA:CISCO CERT.NETWORK..",
+    "New Rental Price":"$63.76",
+    "Used Rental Price":"$43.75",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"93",
+    "Course":"CIS 160 - 6273",
+    "ISBN":"9781587204302",
+    "Title":"CCNA PORTABLE COMMAND GUI",
+    "New Rental Price":"$19.33",
+    "Used Rental Price":"$12.83",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"94",
+    "Course":"CIS 166 - 6277",
+    "ISBN":"9781435483668",
+    "Title":"PENETRATION TESTING:SECUR",
+    "New Rental Price":"$79.86",
+    "Used Rental Price":"$39.56",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"95",
+    "Course":"CIS 166 - 6277",
+    "ISBN":"9781435486096",
+    "Title":"HANDS-ON ETHICAL HACKING+",
+    "New Rental Price":"$136.62",
+    "Used Rental Price":"$64.68",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"96",
+    "Course":"CIS 210 - 6279",
+    "ISBN":"9780137142972",
+    "Title":"PRACTICAL VIRTUALIZATION",
+    "New Rental Price":"$33.65",
+    "Used Rental Price":"$12.62",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"97",
+    "Course":"CIS 215 - 6281",
+    "ISBN":"9780133477436",
+    "Title":"PRACT.GDE.TO FEDORA+RED..",
+    "New Rental Price":"$33.14",
+    "Used Rental Price":"$22.65",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"98",
+    "Course":"CIS 217 - 6283",
+    "ISBN":"9780133477436",
+    "Title":"PRACT.GDE.TO FEDORA+RED..",
+    "New Rental Price":"$33.14",
+    "Used Rental Price":"$22.65",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"99",
+    "Course":"CIS 235 - 6287",
+    "ISBN":"9781111310646",
+    "Title":"E-DISCOVERY (W/DVD)",
+    "New Rental Price":"$44.88",
+    "Used Rental Price":"$30.54",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"100",
+    "Course":"CIS 235 - 6287",
+    "ISBN":"9781435498839",
+    "Title":"GUIDE TO:FORENSICS + INVE",
+    "New Rental Price":"$107.36",
+    "Used Rental Price":"$58.56",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"101",
+    "Course":"CIS 262 - 6291",
+    "ISBN":"9780672336225",
+    "Title":"WINDOWS SERVER 2012 UNLEA",
+    "New Rental Price":"$39.03",
+    "Used Rental Price":"$27.31",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"102",
+    "Course":"CIS 262 - 6291",
+    "ISBN":"9781118789704",
+    "Title":"CCNA:CISCO CERT.NETWORK..",
+    "New Rental Price":"$63.76",
+    "Used Rental Price":"$43.75",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"103",
+    "Course":"CIS 262 - 6291",
+    "ISBN":"9781587133190",
+    "Title":"ROUTING+SWITCHING ESSEN.C",
+    "New Rental Price":"$21.09",
+    "Used Rental Price":"$14.63",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"104",
+    "Course":"CIS 262 - 6291",
+    "ISBN":"9781587133206",
+    "Title":"ROUTING+SWITCHING ESSEN.C",
+    "New Rental Price":"$32.50",
+    "Used Rental Price":"$21.37",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"105",
+    "Course":"CIS 262 - 6291",
+    "ISBN":"9781587204302",
+    "Title":"CCNA PORTABLE COMMAND GUI",
+    "New Rental Price":"$19.33",
+    "Used Rental Price":"$12.83",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"106",
+    "Course":"CIS 370 - 6304",
+    "ISBN":"9780132564717",
+    "Title":"NETWORK FORENSICS",
+    "New Rental Price":"$65.99",
+    "Used Rental Price":"$43.07",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"107",
+    "Course":"CIS 420 - 6305",
+    "ISBN":"9780133387520",
+    "Title":"CLOUD COMPUTING",
+    "New Rental Price":"$43.99",
+    "Used Rental Price":"$29.85",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"108",
+    "Course":"CJ&amp; 106 - 1033",
+    "ISBN":"9780132764469",
+    "Title":"JUVENILE JUSTICE SYSTEM",
+    "New Rental Price":"$129.80",
+    "Used Rental Price":"$87.95",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"109",
+    "Course":"CMST 80 - 5003",
+    "ISBN":"9780131955448",
+    "Title":"SPEECH COMMUNICATION MADE",
+    "New Rental Price":"$46.20",
+    "Used Rental Price":"$22.02",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"110",
+    "Course":"CMST 200 - 5013 ",
+    "ISBN":"9780078036927",
+    "Title":"EXPERIENCING INTERCULTURA",
+    "New Rental Price":"$94.25",
+    "Used Rental Price":"$48.45",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"111",
+    "Course":"CMST&amp; 101 - ALL",
+    "ISBN":"9780205944507",
+    "Title":"THINK COMMUNICATION (2015",
+    "New Rental Price":"$45.50",
+    "Used Rental Price":"$30.78",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"112",
+    "Course":"CMST&amp; 101 - ALL",
+    "ISBN":"9780321869173",
+    "Title":"SAY THIS,NOT THAT",
+    "New Rental Price":"$21.12",
+    "Used Rental Price":"$15.84",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"113",
+    "Course":"CMST&amp; 102 - 4227",
+    "ISBN":"9781457601088",
+    "Title":"MEDIA ESSENTIALS",
+    "New Rental Price":"$45.00",
+    "Used Rental Price":"$35.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"114",
+    "Course":"CMST&amp; 220 - 5077",
+    "ISBN":"9781457623943",
+    "Title":"SPEAK UP",
+    "New Rental Price":"$50.50",
+    "Used Rental Price":"$34.20",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"115",
+    "Course":"CMST&amp; 220 - 5079",
+    "ISBN":"9780983281405",
+    "Title":"HARNESSING YOUR FEAR OF P",
+    "New Rental Price":"$14.08",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"116",
+    "Course":"CMST&amp; 220 - 5083",
+    "ISBN":"9780312621889",
+    "Title":"SPEAK UP!:ILLUST.GDE.TO P",
+    "New Rental Price":"$56.98",
+    "Used Rental Price":"$36.08",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"117",
+    "Course":"CMST&amp; 220 -5085",
+    "ISBN":"9780312621889",
+    "Title":"SPEAK UP!:ILLUST.GDE.TO P",
+    "New Rental Price":"$56.98",
+    "Used Rental Price":"$36.08",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"118",
+    "Course":"COOR&amp; 102 -6071",
+    "ISBN":"9780078026874",
+    "Title":"PRACTICAL SKEPTIC: CORE C",
+    "New Rental Price":"$59.30",
+    "Used Rental Price":"$31.89",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"119",
+    "Course":"DGS 160 - 1063",
+    "ISBN":"9780674010031",
+    "Title":"FORCES OF HABIT",
+    "New Rental Price":"$18.63",
+    "Used Rental Price":"$13.16",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"120",
+    "Course":"DGS 207 - ALL",
+    "ISBN":"9788763002387",
+    "Title":"CROSS CULTURAL BUSINESS B",
+    "New Rental Price":"$30.00",
+    "Used Rental Price":"$25.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"121",
+    "Course":"DGS 260 - 1073",
+    "ISBN":"9780133506303",
+    "Title":"INTERNATIONAL BUSINESS LO",
+    "New Rental Price":"$139.92",
+    "Used Rental Price":"$104.94",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"122",
+    "Course":"DGS 260 - 1073",
+    "ISBN":"9780133543971",
+    "Title":"INTERNATIONAL BUSINESS-MY",
+    "New Rental Price":"$91.52",
+    "Used Rental Price":"$68.64",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"123",
+    "Course":"DGS 260 - 1073",
+    "ISBN":"9780133792355",
+    "Title":"*INTERNATIONAL BUSINESS 2",
+    "New Rental Price":"$145.86",
+    "Used Rental Price":"$109.56",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"124",
+    "Course":"DRAFT 224 - 6307",
+    "ISBN":"9781111128135",
+    "Title":"DRAFTING+DESIGN FOR ARCHI",
+    "New Rental Price":"$176.86",
+    "Used Rental Price":"$123.96",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"125",
+    "Course":"DRAFT 224 - 6307",
+    "ISBN":"9781585037933",
+    "Title":"RESIDENTIAL DESIGN..AUTOC",
+    "New Rental Price":"$42.90",
+    "Used Rental Price":"$29.16",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"126",
+    "Course":"DRAFT 225 - 6309",
+    "ISBN":"9781111128135",
+    "Title":"DRAFTING+DESIGN FOR ARCHI",
+    "New Rental Price":"$176.86",
+    "Used Rental Price":"$123.96",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"127",
+    "Course":"DRAFT 225 - 6309",
+    "ISBN":"9781585037933",
+    "Title":"RESIDENTIAL DESIGN..AUTOC",
+    "New Rental Price":"$42.90",
+    "Used Rental Price":"$29.16",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"128",
+    "Course":"DRAFT 226 - 2433",
+    "ISBN":"9781111128135",
+    "Title":"DRAFTING+DESIGN FOR ARCHI",
+    "New Rental Price":"$176.86",
+    "Used Rental Price":"$123.96",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"129",
+    "Course":"DRAFT 226 - 6911",
+    "ISBN":"9781111128135",
+    "Title":"DRAFTING+DESIGN FOR ARCHI",
+    "New Rental Price":"$176.86",
+    "Used Rental Price":"$123.96",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"130",
+    "Course":"DRAFT 226 - 6911",
+    "ISBN":"9781585037933",
+    "Title":"RESIDENTIAL DESIGN..AUTOC",
+    "New Rental Price":"$42.90",
+    "Used Rental Price":"$29.16",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"131",
+    "Course":"ECON 110 - 1187",
+    "ISBN":"9780062196651",
+    "Title":"MAN VS. MARKETS",
+    "New Rental Price":"$13.46",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"132",
+    "Course":"ENGL 81 - 4005",
+    "ISBN":"9781453328255",
+    "Title":"WRITING FOR SUCCESS - DIG",
+    "New Rental Price":"$42.24",
+    "Used Rental Price":"$31.68",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"133",
+    "Course":"ENGL 91 - 4019",
+    "ISBN":"9781457620744",
+    "Title":"READ,WRITE,CONNECT:GUIDE",
+    "New Rental Price":"$65.29",
+    "Used Rental Price":"$45.66",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"134",
+    "Course":"ENGL 115 - 4261",
+    "ISBN":"9780312079444",
+    "Title":"MAJOR WRITERS OF SHORT FI",
+    "New Rental Price":"$64.68",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"135",
+    "Course":"ENGL 200 - 4061",
+    "ISBN":"9780321357403",
+    "Title":"IMAGINATIVE WRITING",
+    "New Rental Price":"$37.40",
+    "Used Rental Price":"$22.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"136",
+    "Course":"ENGL 200 - 4063",
+    "ISBN":"9780205750351",
+    "Title":"IMAGINATIVE WRITING",
+    "New Rental Price":"$52.58",
+    "Used Rental Price":"$29.48",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"137",
+    "Course":"ENGL 200 - 4065",
+    "ISBN":"9781457611568",
+    "Title":"CREATIVE WRITING FOUR GEN",
+    "New Rental Price":"$39.98",
+    "Used Rental Price":"$28.64",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"138",
+    "Course":"ENGL 201 - 4069",
+    "ISBN":"9780205750351",
+    "Title":"IMAGINATIVE WRITING",
+    "New Rental Price":"$52.58",
+    "Used Rental Price":"$29.48",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"139",
+    "Course":"ENGL 201 - 4071",
+    "ISBN":"9781457611568",
+    "Title":"CREATIVE WRITING FOUR GEN",
+    "New Rental Price":"$39.98",
+    "Used Rental Price":"$28.64",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"140",
+    "Course":"ENGL 202 - 4075",
+    "ISBN":"9780205750351",
+    "Title":"IMAGINATIVE WRITING",
+    "New Rental Price":"$52.58",
+    "Used Rental Price":"$29.48",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"141",
+    "Course":"ENGL 202 - 4077",
+    "ISBN":"9781457611568",
+    "Title":"CREATIVE WRITING FOUR GEN",
+    "New Rental Price":"$39.98",
+    "Used Rental Price":"$28.64",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"142",
+    "Course":"ENGL 203 - 4081",
+    "ISBN":"9780205750351",
+    "Title":"IMAGINATIVE WRITING",
+    "New Rental Price":"$52.58",
+    "Used Rental Price":"$29.48",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"143",
+    "Course":"ENGL 203 - 4083",
+    "ISBN":"9781457611568",
+    "Title":"CREATIVE WRITING FOUR GEN",
+    "New Rental Price":"$39.98",
+    "Used Rental Price":"$28.64",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"144",
+    "Course":"ENGL 205 - 4089 ",
+    "ISBN":"9781457608919",
+    "Title":"FIELDS OF READING",
+    "New Rental Price":"$44.72",
+    "Used Rental Price":"$24.37",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"145",
+    "Course":"ENGL 205 - 4093 ",
+    "ISBN":"9781457608919",
+    "Title":"FIELDS OF READING",
+    "New Rental Price":"$44.72",
+    "Used Rental Price":"$24.37",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"146",
+    "Course":"ENGL 205 - 4105",
+    "ISBN":"9780073383842",
+    "Title":"AIMS OF ARGUMENT:BRIEF GU",
+    "New Rental Price":"$86.46",
+    "Used Rental Price":"$64.90",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"147",
+    "Course":"ENGL 205 - 4107",
+    "ISBN":"9780073383842",
+    "Title":"AIMS OF ARGUMENT:BRIEF GU",
+    "New Rental Price":"$86.46",
+    "Used Rental Price":"$64.90",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"148",
+    "Course":"ENGL 205 - 4109",
+    "ISBN":"9780205236411",
+    "Title":"WRITING RESEARCH PAPERS",
+    "New Rental Price":"$49.72",
+    "Used Rental Price":"$23.54",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"149",
+    "Course":"ENGL 205 - 4111",
+    "ISBN":"9780205236411",
+    "Title":"WRITING RESEARCH PAPERS",
+    "New Rental Price":"$49.72",
+    "Used Rental Price":"$23.54",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"150",
+    "Course":"ENGL 205 - 4113",
+    "ISBN":"9780205236411",
+    "Title":"WRITING RESEARCH PAPERS",
+    "New Rental Price":"$49.72",
+    "Used Rental Price":"$23.54",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"151",
+    "Course":"ENGL 211 - 4117",
+    "ISBN":"9780767402071",
+    "Title":"CRAFTING FICTION",
+    "New Rental Price":"$51.48",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"152",
+    "Course":"ENGL 212 - 4121",
+    "ISBN":"9780767402071",
+    "Title":"CRAFTING FICTION",
+    "New Rental Price":"$51.48",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"153",
+    "Course":"ENGL 213 - 4125",
+    "ISBN":"9780767402071",
+    "Title":"CRAFTING FICTION",
+    "New Rental Price":"$51.48",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"154",
+    "Course":"ENGL 335 - 4145",
+    "ISBN":"9780199379996",
+    "Title":"ESSENTIALS OF TECHNICAL C",
+    "New Rental Price":"$33.71",
+    "Used Rental Price":"$23.51",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"155",
+    "Course":"ENGL&amp; 101 - 4153",
+    "ISBN":"9781285436500",
+    "Title":"WRITING ANALYTICALLY",
+    "New Rental Price":"$61.00",
+    "Used Rental Price":"$42.47",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"156",
+    "Course":"ENGL&amp; 101 - 4155",
+    "ISBN":"9780312601416",
+    "Title":"FROM INQUIRY TO ACAD.WRIT",
+    "New Rental Price":"$65.75",
+    "Used Rental Price":"$46.44",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"157",
+    "Course":"ENGL&amp; 101 - 4157",
+    "ISBN":"9780393933611",
+    "Title":"THEY SAY I SAY",
+    "New Rental Price":"$23.54",
+    "Used Rental Price":"$14.74",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"158",
+    "Course":"ENGL&amp; 101 - 4158",
+    "ISBN":"9781285436500",
+    "Title":"WRITING ANALYTICALLY",
+    "New Rental Price":"$61.00",
+    "Used Rental Price":"$42.47",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"159",
+    "Course":"ENGL&amp; 101 - 4161",
+    "ISBN":"9780312601416",
+    "Title":"FROM INQUIRY TO ACAD.WRIT",
+    "New Rental Price":"$65.75",
+    "Used Rental Price":"$46.44",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"160",
+    "Course":"ENGL&amp; 101 - 4167",
+    "ISBN":"9780393935806",
+    "Title":"LITTLE SEAGULL HANDBOOK",
+    "New Rental Price":"$16.55",
+    "Used Rental Price":"$11.54",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"161",
+    "Course":"ENGL&amp; 101 - 4167",
+    "ISBN":"9780393935844",
+    "Title":"THEY SAY I SAY",
+    "New Rental Price":"$16.55",
+    "Used Rental Price":"$11.54",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"162",
+    "Course":"ENGL&amp; 101 - 4167",
+    "ISBN":"9781457615931",
+    "Title":"AMERICA NOW",
+    "New Rental Price":"$41.33",
+    "Used Rental Price":"$23.16",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"163",
+    "Course":"ENGL&amp; 101 - 4171",
+    "ISBN":"9780393933611",
+    "Title":"THEY SAY I SAY",
+    "New Rental Price":"$23.54",
+    "Used Rental Price":"$14.74",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"164",
+    "Course":"ENGL&amp; 101 - 4175",
+    "ISBN":"9781285437965",
+    "Title":"COLLEGE WRITER,BRIEF",
+    "New Rental Price":"$55.00",
+    "Used Rental Price":"$35.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"165",
+    "Course":"ENGL&amp; 101 - 4177",
+    "ISBN":"9780393933611",
+    "Title":"THEY SAY I SAY",
+    "New Rental Price":"$23.54",
+    "Used Rental Price":"$14.74",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"166",
+    "Course":"ENGL&amp; 101 - 4179",
+    "ISBN":"9780312679507",
+    "Title":"WRITING &amp;REVISING MLA APA",
+    "New Rental Price":"$14.79",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"167",
+    "Course":"ENGL&amp; 101 - 4181",
+    "ISBN":"9780205230747",
+    "Title":"WHAT MATTERS IN AMERICA",
+    "New Rental Price":"$11.94",
+    "Used Rental Price":"$8.98",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"168",
+    "Course":"ENGL&amp; 101 - 4181",
+    "ISBN":"9780321872319",
+    "Title":"*WHAT MATTERS IN  AMERICA",
+    "New Rental Price":"$52.58",
+    "Used Rental Price":"$39.60",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"169",
+    "Course":"ENGL&amp; 101 - 4185",
+    "ISBN":"9780393933611",
+    "Title":"THEY SAY I SAY",
+    "New Rental Price":"$23.54",
+    "Used Rental Price":"$14.74",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"170",
+    "Course":"ENGL&amp; 101 - 4187",
+    "ISBN":"9780393933611",
+    "Title":"THEY SAY I SAY",
+    "New Rental Price":"$23.54",
+    "Used Rental Price":"$14.74",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"171",
+    "Course":"ENGL&amp; 101 - 4189",
+    "ISBN":"9780393912753",
+    "Title":"THEY SAY,I SAY-W/READINGS",
+    "New Rental Price":"$39.05",
+    "Used Rental Price":"$21.45",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"172",
+    "Course":"ENGL&amp; 111 - 4267 ",
+    "ISBN":"9780205151660",
+    "Title":"BACKPACK LITERATURE",
+    "New Rental Price":"$38.00",
+    "Used Rental Price":"$25.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"173",
+    "Course":"ENGL&amp; 111 - 4269",
+    "ISBN":"9780375507908",
+    "Title":"IN COLD BLOOD",
+    "New Rental Price":"$17.20",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"174",
+    "Course":"ENGL&amp; 112 - 4271",
+    "ISBN":"9780375507908",
+    "Title":"IN COLD BLOOD",
+    "New Rental Price":"$17.20",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"175",
+    "Course":"ENGL&amp; 235 - 4209",
+    "ISBN":"9780199379996",
+    "Title":"ESSENTIALS OF TECHNICAL C",
+    "New Rental Price":"$33.71",
+    "Used Rental Price":"$23.51",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"176",
+    "Course":"ENGL&amp; 235 - 4211",
+    "ISBN":"9780199379996",
+    "Title":"ESSENTIALS OF TECHNICAL C",
+    "New Rental Price":"$33.71",
+    "Used Rental Price":"$23.51",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"177",
+    "Course":"ENGLP 101 - 4223",
+    "ISBN":"9780393935806",
+    "Title":"LITTLE SEAGULL HANDBOOK",
+    "New Rental Price":"$16.55",
+    "Used Rental Price":"$11.54",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"178",
+    "Course":"ENGLP 101 - 4225",
+    "ISBN":"9780393935844",
+    "Title":"THEY SAY I SAY",
+    "New Rental Price":"$16.55",
+    "Used Rental Price":"$11.54",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"179",
+    "Course":"ENGLP 101 - 4225",
+    "ISBN":"9781457615931",
+    "Title":"AMERICA NOW",
+    "New Rental Price":"$41.33",
+    "Used Rental Price":"$23.16",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"180",
+    "Course":"ENGR 100 -  ALL",
+    "ISBN":"9780979348747",
+    "Title":"STUDYING ENGINEERING",
+    "New Rental Price":"$14.75",
+    "Used Rental Price":"$10.69",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"181",
+    "Course":"ENGR&amp; 114 - 6323",
+    "ISBN":"9781256341352",
+    "Title":"TECHNICAL DRAWING W/ENGIN",
+    "New Rental Price":"$60.00",
+    "Used Rental Price":"$42.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"182",
+    "Course":"ENGR&amp; 214 - 6325",
+    "ISBN":"9780132915489",
+    "Title":"ENGR.MECH.:STAT.+DYNAMICS",
+    "New Rental Price":"$126.36",
+    "Used Rental Price":"$86.78",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"183",
+    "Course":"F S 105 - 4277",
+    "ISBN":"9780393978681",
+    "Title":"HISTORY OF NARRATIVE FILM",
+    "New Rental Price":"$89.32",
+    "Used Rental Price":"$47.52",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"184",
+    "Course":"F S 112 - 4283",
+    "ISBN":"9780851708096",
+    "Title":"THELMA+LOUISE",
+    "New Rental Price":"$15.80",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"185",
+    "Course":"F S 221 - 4285",
+    "ISBN":"9781932907001",
+    "Title":"SAVE THE CAT",
+    "New Rental Price":"$13.08",
+    "Used Rental Price":"$9.27",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"186",
+    "Course":"F S 221 - 4285",
+    "ISBN":"9781935247104",
+    "Title":"SCREENWRITER'S BIBLE",
+    "New Rental Price":"$16.87",
+    "Used Rental Price":"$11.59",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"187",
+    "Course":"FRCH&amp; 122 - 5271",
+    "ISBN":"9780132386517",
+    "Title":"ROND-POINT:UNE PERSPECTIV",
+    "New Rental Price":"$91.96",
+    "Used Rental Price":"$55.88",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"188",
+    "Course":"FRCH&amp; 122 - 5273",
+    "ISBN":"9780132386517",
+    "Title":"ROND-POINT:UNE PERSPECTIV",
+    "New Rental Price":"$91.96",
+    "Used Rental Price":"$55.88",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"189",
+    "Course":"GEO 101 - 6223",
+    "ISBN":"9780321814067",
+    "Title":"EARTH:INTRO.TO PHYSICAL G",
+    "New Rental Price":"$62.67",
+    "Used Rental Price":"$47.03",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"190",
+    "Course":"GEO 103 - 6225",
+    "ISBN":"9780231158930",
+    "Title":"BRINGING FOSSILS TO LIFE",
+    "New Rental Price":"$58.42",
+    "Used Rental Price":"$40.61",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"191",
+    "Course":"GEO 105 - ALL",
+    "ISBN":"9780321814067",
+    "Title":"EARTH:INTRO.TO PHYSICAL G",
+    "New Rental Price":"$62.67",
+    "Used Rental Price":"$47.03",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"192",
+    "Course":"GEO 107 - 6235",
+    "ISBN":"9781133590811",
+    "Title":"NATURAL HAZARDS+DISASTERS",
+    "New Rental Price":"$174.09",
+    "Used Rental Price":"$122.11",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"193",
+    "Course":"GEOG 120 - ALL",
+    "ISBN":"9780528004827",
+    "Title":"ATLAS OF WORLD GEOGRAPHY",
+    "New Rental Price":"$13.85",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"194",
+    "Course":"GEOG 120 - ALL",
+    "ISBN":"9781465228604",
+    "Title":"PLAID AVENGER'S WORLD  UP",
+    "New Rental Price":"$92.40",
+    "Used Rental Price":"$61.56",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"195",
+    "Course":"GEOG 200 - 1217",
+    "ISBN":"9781429240185",
+    "Title":"HUMAN MOSAIC",
+    "New Rental Price":"$126.30",
+    "Used Rental Price":"$76.85",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"196",
+    "Course":"GEOG 205 - 1219",
+    "ISBN":"9780321706225",
+    "Title":"GEOSYSTEMS",
+    "New Rental Price":"$126.28",
+    "Used Rental Price":"$84.04",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"197",
+    "Course":"H S 15 - 1865",
+    "ISBN":"9781422983430",
+    "Title":"AMERICA:STORY OF US",
+    "New Rental Price":"$23.41",
+    "Used Rental Price":"$17.56",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"198",
+    "Course":"H S 15 - 1865",
+    "ISBN":"9781935254683",
+    "Title":"SAY THIS NOT THAT TO YOUR",
+    "New Rental Price":"$14.04",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"199",
+    "Course":"H S 16 - 1867",
+    "ISBN":"9780295990637",
+    "Title":"HIKING WASHINGTON'S HISTO",
+    "New Rental Price":"$16.68",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"200",
+    "Course":"H S 16 - 1867",
+    "ISBN":"9780803292284",
+    "Title":"PACIFIC NORTHWEST (REV &amp;",
+    "New Rental Price":"$18.45",
+    "Used Rental Price":"$11.05",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"201",
+    "Course":"H S 16 - 1867",
+    "ISBN":"9781570616938",
+    "Title":"NEW LAND NORTH OF THE COL",
+    "New Rental Price":"$35.20",
+    "Used Rental Price":"$19.32",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"202",
+    "Course":"H S 16 - 1867",
+    "ISBN":"9781935254683",
+    "Title":"SAY THIS NOT THAT TO YOUR",
+    "New Rental Price":"$14.04",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"203",
+    "Course":"H SER 101 - 1075",
+    "ISBN":"9780840028563",
+    "Title":"THEORY,PRAC.,+TRENDS IN H",
+    "New Rental Price":"$63.84",
+    "Used Rental Price":"$50.73",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"204",
+    "Course":"H SER 102 - 1077",
+    "ISBN":"9780926544390",
+    "Title":"UPPERS,DOWNERS, ALL AROUN",
+    "New Rental Price":"$70.70",
+    "Used Rental Price":"$47.88",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"205",
+    "Course":"H SER 105 - 1081",
+    "ISBN":"9781412979214",
+    "Title":"CHEMICAL DEPENDENCY COUNS",
+    "New Rental Price":"$77.69",
+    "Used Rental Price":"$43.20",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"206",
+    "Course":"H SER 110 - 1083",
+    "ISBN":"9780137070183",
+    "Title":"COUNSELING STRAT.+INTERVE",
+    "New Rental Price":"$76.70",
+    "Used Rental Price":"$54.62",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"207",
+    "Course":"H SER 119 - 1085",
+    "ISBN":"9780495812418",
+    "Title":"ISSUES+ETHICS IN HELPING",
+    "New Rental Price":"$141.46",
+    "Used Rental Price":"$43.96",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"208",
+    "Course":"HEAL 102 - 2175",
+    "ISBN":"9781133602866",
+    "Title":"DELMAR'S COMPREHENSIVE ME",
+    "New Rental Price":"$77.51",
+    "Used Rental Price":"$53.82",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"209",
+    "Course":"HEAL 102 - 2175",
+    "ISBN":"9781133603221",
+    "Title":"COMPETENCY MANUAL FOR DEL",
+    "New Rental Price":"$24.64",
+    "Used Rental Price":"$18.48",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"210",
+    "Course":"HEAL 104 - 2181",
+    "ISBN":"9780133346831",
+    "Title":"MEDICAL LANGUAGE:IMMERSE.",
+    "New Rental Price":"$67.23",
+    "Used Rental Price":"$46.53",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"211",
+    "Course":"HEAL 104 - 2181",
+    "ISBN":"9780133962048",
+    "Title":"*MEDICAL LANGUAGE TERM.W/",
+    "New Rental Price":"$115.28",
+    "Used Rental Price":"$86.46",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"212",
+    "Course":"HEAL 210 - 2243",
+    "ISBN":"9780077578886",
+    "Title":"BLOOD &amp; AIRBORNE PATHOGEN",
+    "New Rental Price":"$15.40",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"213",
+    "Course":"HEAL 226 - 2265",
+    "ISBN":"9781418032647",
+    "Title":"THERAPEUTIC COMMUN.FOR HE",
+    "New Rental Price":"$91.30",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"214",
+    "Course":"HEAL 239 - 2271",
+    "ISBN":"9780962126482",
+    "Title":"FIND YOR NEXT PROFESSIONA",
+    "New Rental Price":"$26.40",
+    "Used Rental Price":"$19.80",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"215",
+    "Course":"HIST 115 - 1271",
+    "ISBN":"9780205660568",
+    "Title":"WORLD WAR II",
+    "New Rental Price":"$89.91",
+    "Used Rental Price":"$47.13",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"216",
+    "Course":"HIST&amp; 116 - 1279",
+    "ISBN":"9780393922165",
+    "Title":"WESTERN CIVILIZATIONS,VOL",
+    "New Rental Price":"$60.60",
+    "Used Rental Price":"$41.04",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"217",
+    "Course":"HIST&amp; 118 - 1280",
+    "ISBN":"9780393922189",
+    "Title":"WESTERN CIVILIZATIONS,VOL",
+    "New Rental Price":"$66.61",
+    "Used Rental Price":"$46.80",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"218",
+    "Course":"HIST&amp; 146 - 1286",
+    "ISBN":"9780312569549",
+    "Title":"AMERICAN PROMISE (VA)",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$35.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"219",
+    "Course":"HIST&amp; 146 - 1286",
+    "ISBN":"9780312663124",
+    "Title":"AMERICAN PROMISE - COMBIN",
+    "New Rental Price":"$123.20",
+    "Used Rental Price":"$73.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"220",
+    "Course":"HIST&amp; 147 - 1219",
+    "ISBN":"9780312569471",
+    "Title":"AMERICAN PROMISE (VB)",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$35.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"221",
+    "Course":"HIST&amp; 147 - 1219",
+    "ISBN":"9780312663124",
+    "Title":"AMERICAN PROMISE - COMBIN",
+    "New Rental Price":"$123.20",
+    "Used Rental Price":"$73.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"222",
+    "Course":"HIST&amp; 147 - 1288",
+    "ISBN":"9780312569471",
+    "Title":"AMERICAN PROMISE (VB)",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$35.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"223",
+    "Course":"HIST&amp; 147 - 1288",
+    "ISBN":"9780312663124",
+    "Title":"AMERICAN PROMISE - COMBIN",
+    "New Rental Price":"$123.20",
+    "Used Rental Price":"$73.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"224",
+    "Course":"HIST&amp; 147 - 1289",
+    "ISBN":"9780312569471",
+    "Title":"AMERICAN PROMISE (VB)",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$35.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"225",
+    "Course":"HIST&amp; 147 - 1289",
+    "ISBN":"9780312663124",
+    "Title":"AMERICAN PROMISE - COMBIN",
+    "New Rental Price":"$123.20",
+    "Used Rental Price":"$73.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"226",
+    "Course":"HOST 105 - ALL",
+    "ISBN":"9780931202605",
+    "Title":"TRAVEL CAREER DEVELOPMENT",
+    "New Rental Price":"$99.88",
+    "Used Rental Price":"$65.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"227",
+    "Course":"HOST 155 - ALL",
+    "ISBN":"9780931202636",
+    "Title":"EXPLORING THE WORLD",
+    "New Rental Price":"$74.26",
+    "Used Rental Price":"$38.47",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"228",
+    "Course":"HOST 165 - ALL",
+    "ISBN":"9780073545462",
+    "Title":"CUSTOMER SERVICE",
+    "New Rental Price":"$70.00",
+    "Used Rental Price":"$50.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"229",
+    "Course":"HUM&amp; 117 - 4335",
+    "ISBN":"9780495568773",
+    "Title":"CULTURE+VALUES,V.I",
+    "New Rental Price":"$159.28",
+    "Used Rental Price":"$35.20",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"230",
+    "Course":"HUM&amp; 120 - 4315",
+    "ISBN":"9780195289558",
+    "Title":"NEW OXF.ANNOT.BIBLE W/APO",
+    "New Rental Price":"$34.71",
+    "Used Rental Price":"$24.36",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"231",
+    "Course":"IBSTB 100 - 2381",
+    "ISBN":"9780077824631",
+    "Title":"GREGG..KEYBRD.+DOC.PROC.W",
+    "New Rental Price":"$119.37",
+    "Used Rental Price":"$82.39",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"232",
+    "Course":"IBSTB 100 - 2381",
+    "ISBN":"9780538750981",
+    "Title":"INTERNET:ILLUSTRATED INTR",
+    "New Rental Price":"$91.96",
+    "Used Rental Price":"$46.60",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"233",
+    "Course":"IBSTB 120 - 2382",
+    "ISBN":"9780077825737",
+    "Title":"COLLEGE KEYBOARDING ETC (",
+    "New Rental Price":"$184.47",
+    "Used Rental Price":"$126.97",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"234",
+    "Course":"IBSTB 120 - 2382",
+    "ISBN":"9780538469760",
+    "Title":"ILLUS.COURSE GDE.TEAMWORK",
+    "New Rental Price":"$20.42",
+    "Used Rental Price":"$16.51",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"235",
+    "Course":"IBSTB 120 - 2382",
+    "ISBN":"9780962126482",
+    "Title":"FIND YOR NEXT PROFESSIONA",
+    "New Rental Price":"$26.40",
+    "Used Rental Price":"$19.80",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"236",
+    "Course":"IBSTB 120 - 2382",
+    "ISBN":"9781439041147",
+    "Title":"PROBLEM-SOLVING &amp; DECISIO",
+    "New Rental Price":"$33.00",
+    "Used Rental Price":"$22.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"237",
+    "Course":"INT D 125 - 2415",
+    "ISBN":"9781118367629",
+    "Title":"KITCHEN PLANNING",
+    "New Rental Price":"$61.75",
+    "Used Rental Price":"$41.25",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"238",
+    "Course":"INT D 126 - 2429",
+    "ISBN":"9781118367629",
+    "Title":"KITCHEN PLANNING",
+    "New Rental Price":"$61.75",
+    "Used Rental Price":"$41.25",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"239",
+    "Course":"INT D 128 - 2419",
+    "ISBN":"9780471464341",
+    "Title":"HISTORY OF INTERIOR DESIG",
+    "New Rental Price":"$79.20",
+    "Used Rental Price":"$13.20",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"240",
+    "Course":"JAPN&amp; 122 - 5285",
+    "ISBN":"9780618966288",
+    "Title":"NAKAMA VOL.1-TEXT",
+    "New Rental Price":"$48.39",
+    "Used Rental Price":"$34.34",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"241",
+    "Course":"JAPN&amp; 122 - 5287",
+    "ISBN":"9780618966288",
+    "Title":"NAKAMA VOL.1-TEXT",
+    "New Rental Price":"$48.39",
+    "Used Rental Price":"$34.34",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"242",
+    "Course":"JRNL 101 - 4231",
+    "ISBN":"9780073526171",
+    "Title":"INSIDE REPORTING",
+    "New Rental Price":"$65.12",
+    "Used Rental Price":"$48.59",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"243",
+    "Course":"JRNL 101 - 4231",
+    "ISBN":"9780465082995",
+    "Title":"ASSOC.PR.STYLEBOOK+BRIEFI",
+    "New Rental Price":"$13.15",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"244",
+    "Course":"LEGAL 102 - 2441",
+    "ISBN":"9781111312220",
+    "Title":"CIVIL LITIGATION",
+    "New Rental Price":"$154.44",
+    "Used Rental Price":"$66.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"245",
+    "Course":"LEGAL 103 - 2443",
+    "ISBN":"9781111312220",
+    "Title":"CIVIL LITIGATION",
+    "New Rental Price":"$154.44",
+    "Used Rental Price":"$66.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"246",
+    "Course":"LEGAL 135 - 2449",
+    "ISBN":"9781285189598",
+    "Title":"USING COMPUTERS IN LAW...",
+    "New Rental Price":"$111.64",
+    "Used Rental Price":"$77.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"247",
+    "Course":"LEGAL 139 - 2451",
+    "ISBN":"9780132069038",
+    "Title":"HOW TO LAND YOUR FIRST PA",
+    "New Rental Price":"$50.55",
+    "Used Rental Price":"$20.95",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"248",
+    "Course":"LEGAL 141 - 2455",
+    "ISBN":"9781401838966",
+    "Title":"SURVIVING AND THRIVING IN",
+    "New Rental Price":"$42.90",
+    "Used Rental Price":"$26.36",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"249",
+    "Course":"LEGAL 166 - 2457",
+    "ISBN":"9781418032593",
+    "Title":"LEARNING ABOUT IMMIGRATIO",
+    "New Rental Price":"$89.54",
+    "Used Rental Price":"$49.82",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"250",
+    "Course":"LEGAL 199 - 2459",
+    "ISBN":"9780073520513",
+    "Title":"BASIC LEGAL RESEARCH",
+    "New Rental Price":"$50.82",
+    "Used Rental Price":"$26.39",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"251",
+    "Course":"LEGAL 199 - 2459",
+    "ISBN":"9781418080884",
+    "Title":"ELECTRONIC LEGAL RESEARCH",
+    "New Rental Price":"$122.76",
+    "Used Rental Price":"$69.48",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"252",
+    "Course":"LEGAL 200 - 2461",
+    "ISBN":"9780226284187",
+    "Title":"LEGAL WRITING IN PLAIN EN",
+    "New Rental Price":"$13.46",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"253",
+    "Course":"LEGAL 200 - 2461",
+    "ISBN":"9780735552296",
+    "Title":"CLEAR+EFFECTIVE LEGAL WRI",
+    "New Rental Price":"$77.44",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"254",
+    "Course":"LEGAL 200 - 2461",
+    "ISBN":"9781401865979",
+    "Title":"POCKET GUIDE TO LEGAL WRI",
+    "New Rental Price":"$19.64",
+    "Used Rental Price":"$10.56",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"255",
+    "Course":"LEGAL 202 - 2463",
+    "ISBN":"9780312322823",
+    "Title":"GAIN THE EDGE!",
+    "New Rental Price":"$14.95",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"256",
+    "Course":"LEGAL 202 - 2463",
+    "ISBN":"9781454816454",
+    "Title":"BASIC CONTRACT LAW FOR PA",
+    "New Rental Price":"$94.35",
+    "Used Rental Price":"$67.28",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"257",
+    "Course":"LEGAL 241 - 2469",
+    "ISBN":"9781401838966",
+    "Title":"SURVIVING AND THRIVING IN",
+    "New Rental Price":"$42.90",
+    "Used Rental Price":"$26.36",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"258",
+    "Course":"LIBR 130 - 5313",
+    "ISBN":"9780838934708",
+    "Title":"INFORMATION POWER:BUILDIN",
+    "New Rental Price":"$49.28",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"259",
+    "Course":"MATH 111 -  6393",
+    "ISBN":"9781133106234",
+    "Title":"MATH.APPL.F/MGMT.,LIFE,+S",
+    "New Rental Price":"$220.66",
+    "Used Rental Price":"$122.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"260",
+    "Course":"MATH 111 - 6395",
+    "ISBN":"9781133106234",
+    "Title":"MATH.APPL.F/MGMT.,LIFE,+S",
+    "New Rental Price":"$220.66",
+    "Used Rental Price":"$122.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"261",
+    "Course":"MATH 111 -  6397",
+    "ISBN":"9781133106234",
+    "Title":"MATH.APPL.F/MGMT.,LIFE,+S",
+    "New Rental Price":"$220.66",
+    "Used Rental Price":"$122.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"262",
+    "Course":"MATH 111 - 6399",
+    "ISBN":"9781133106234",
+    "Title":"MATH.APPL.F/MGMT.,LIFE,+S",
+    "New Rental Price":"$220.66",
+    "Used Rental Price":"$122.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"263",
+    "Course":"MATH 111 - 6403",
+    "ISBN":"9781133106234",
+    "Title":"MATH.APPL.F/MGMT.,LIFE,+S",
+    "New Rental Price":"$220.66",
+    "Used Rental Price":"$122.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"264",
+    "Course":"MATH 111 - 6405",
+    "ISBN":"9780321746603",
+    "Title":"FINITE MATH.+CALC.W/APPL.",
+    "New Rental Price":"$121.00",
+    "Used Rental Price":"$90.86",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"265",
+    "Course":"MATH 180 - ALL",
+    "ISBN":"9781118457443",
+    "Title":"MATH.F/ELEMENTARY TEACHER",
+    "New Rental Price":"$120.89",
+    "Used Rental Price":"$85.31",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"266",
+    "Course":"MATH 181 - ALL",
+    "ISBN":"9781118457443",
+    "Title":"MATH.F/ELEMENTARY TEACHER",
+    "New Rental Price":"$120.89",
+    "Used Rental Price":"$85.31",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"267",
+    "Course":"MATH 220 - ALL",
+    "ISBN":"9780321796974",
+    "Title":"LINEAR ALGEBRA WITH APPLI",
+    "New Rental Price":"$95.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"268",
+    "Course":"MATH 230 - ALL",
+    "ISBN":"9781111827052",
+    "Title":"FIRST CRSE.IN DIFF.EQUAT.",
+    "New Rental Price":"$127.30",
+    "Used Rental Price":"$87.21",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"269",
+    "Course":"MATH&amp; 107- ALL",
+    "ISBN":"9780321825735",
+    "Title":"EXCURSIONS IN MODERN MATH",
+    "New Rental Price":"$103.49",
+    "Used Rental Price":"$39.90",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"270",
+    "Course":"MATH&amp; 141 - ALL",
+    "ISBN":"9780840068071",
+    "Title":"PRECALCULUS MATH.FOR CALC",
+    "New Rental Price":"$210.98",
+    "Used Rental Price":"$105.38",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"271",
+    "Course":"MATH&amp; 141 - ALL",
+    "ISBN":"9781133150657",
+    "Title":"*PRECALCULUS: MATHEMATICS",
+    "New Rental Price":"$185.90",
+    "Used Rental Price":"$139.48",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"272",
+    "Course":"MATH&amp; 142 - ALL",
+    "ISBN":"9780840068071",
+    "Title":"PRECALCULUS MATH.FOR CALC",
+    "New Rental Price":"$210.98",
+    "Used Rental Price":"$105.38",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"273",
+    "Course":"MATH&amp; 146 -6439",
+    "ISBN":"9780840048387",
+    "Title":"UNDERSTANDABLE  STATISTIC",
+    "New Rental Price":"$129.01",
+    "Used Rental Price":"$96.76",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"274",
+    "Course":"MATH&amp; 146 -6439",
+    "ISBN":"9781111655488",
+    "Title":"*UNDERSTANDABLE STATISTIC",
+    "New Rental Price":"$191.62",
+    "Used Rental Price":"$161.04",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"275",
+    "Course":"MATH&amp; 146 - 6441",
+    "ISBN":"9780840048387",
+    "Title":"UNDERSTANDABLE  STATISTIC",
+    "New Rental Price":"$129.01",
+    "Used Rental Price":"$96.76",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"276",
+    "Course":"MATH&amp; 146 - 6441",
+    "ISBN":"9781111655488",
+    "Title":"*UNDERSTANDABLE STATISTIC",
+    "New Rental Price":"$191.62",
+    "Used Rental Price":"$161.04",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"277",
+    "Course":"MATH&amp; 146 - 6443",
+    "ISBN":"9780840048387",
+    "Title":"UNDERSTANDABLE  STATISTIC",
+    "New Rental Price":"$129.01",
+    "Used Rental Price":"$96.76",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"278",
+    "Course":"MATH&amp; 146 - 6443",
+    "ISBN":"9781111655488",
+    "Title":"*UNDERSTANDABLE STATISTIC",
+    "New Rental Price":"$191.62",
+    "Used Rental Price":"$161.04",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"279",
+    "Course":"MATH&amp; 146 - 6445",
+    "ISBN":"9780840048387",
+    "Title":"UNDERSTANDABLE  STATISTIC",
+    "New Rental Price":"$129.01",
+    "Used Rental Price":"$96.76",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"280",
+    "Course":"MATH&amp; 146 - 6445",
+    "ISBN":"9781111655488",
+    "Title":"*UNDERSTANDABLE STATISTIC",
+    "New Rental Price":"$191.62",
+    "Used Rental Price":"$161.04",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"281",
+    "Course":"MATH&amp; 146 - 6447",
+    "ISBN":"9780840048387",
+    "Title":"UNDERSTANDABLE  STATISTIC",
+    "New Rental Price":"$129.01",
+    "Used Rental Price":"$96.76",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"282",
+    "Course":"MATH&amp; 146 - 6447",
+    "ISBN":"9781111655488",
+    "Title":"*UNDERSTANDABLE STATISTIC",
+    "New Rental Price":"$191.62",
+    "Used Rental Price":"$161.04",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"283",
+    "Course":"MATH&amp; 146 - 6449",
+    "ISBN":"9780077567668",
+    "Title":"ELEMENTARY STAT.,BRIEF",
+    "New Rental Price":"$117.70",
+    "Used Rental Price":"$88.44",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"284",
+    "Course":"MATH&amp; 146 - 6451",
+    "ISBN":"9780077567668",
+    "Title":"ELEMENTARY STAT.,BRIEF",
+    "New Rental Price":"$117.70",
+    "Used Rental Price":"$88.44",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"285",
+    "Course":"MATH&amp; 148 - 6443",
+    "ISBN":"9781133106234",
+    "Title":"MATH.APPL.F/MGMT.,LIFE,+S",
+    "New Rental Price":"$220.66",
+    "Used Rental Price":"$122.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"286",
+    "Course":"MATH&amp; 148 - 6455",
+    "ISBN":"9781133106234",
+    "Title":"MATH.APPL.F/MGMT.,LIFE,+S",
+    "New Rental Price":"$220.66",
+    "Used Rental Price":"$122.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"287",
+    "Course":"MATH&amp; 148 - 6457",
+    "ISBN":"9781133106234",
+    "Title":"MATH.APPL.F/MGMT.,LIFE,+S",
+    "New Rental Price":"$220.66",
+    "Used Rental Price":"$122.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"288",
+    "Course":"MATH&amp; 151 - ALL",
+    "ISBN":"9780538497909",
+    "Title":"CALCULUS,EARLY TRANSCENDE",
+    "New Rental Price":"$117.37",
+    "Used Rental Price":"$89.77",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"289",
+    "Course":"MATH&amp; 151 - ALL",
+    "ISBN":"9781111649579",
+    "Title":"*CALCULUS:EARLY TRANS.W/W",
+    "New Rental Price":"$200.86",
+    "Used Rental Price":"$150.70",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"290",
+    "Course":"MATH&amp; 152 - ALL",
+    "ISBN":"9780538497909",
+    "Title":"CALCULUS,EARLY TRANSCENDE",
+    "New Rental Price":"$117.37",
+    "Used Rental Price":"$89.77",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"291",
+    "Course":"MATH&amp; 152 - ALL",
+    "ISBN":"9781111649579",
+    "Title":"*CALCULUS:EARLY TRANS.W/W",
+    "New Rental Price":"$200.86",
+    "Used Rental Price":"$150.70",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"292",
+    "Course":"MATH&amp; 153 - ALL",
+    "ISBN":"9780538497909",
+    "Title":"CALCULUS,EARLY TRANSCENDE",
+    "New Rental Price":"$117.37",
+    "Used Rental Price":"$89.77",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"293",
+    "Course":"MATH&amp; 153 - ALL",
+    "ISBN":"9781111649579",
+    "Title":"*CALCULUS:EARLY TRANS.W/W",
+    "New Rental Price":"$200.86",
+    "Used Rental Price":"$150.70",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"294",
+    "Course":"MUSC 107 - 5159",
+    "ISBN":"9780199859115",
+    "Title":"AMERICAN POPULAR MUSIC MI",
+    "New Rental Price":"$60.42",
+    "Used Rental Price":"$39.76",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"295",
+    "Course":"MUSC 109 - 5161",
+    "ISBN":"9780393118438",
+    "Title":"JAZZ ESSENTIAL LISTENING-",
+    "New Rental Price":"$26.17",
+    "Used Rental Price":"$18.58",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"296",
+    "Course":"MUSC 109 - 5161",
+    "ISBN":"9780393935639",
+    "Title":"JAZZ ESSENTIALS",
+    "New Rental Price":"$52.88",
+    "Used Rental Price":"$32.64",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"297",
+    "Course":"MUSC 110 - 5165",
+    "ISBN":"9780415717816",
+    "Title":"WORLD MUSIC:GLOBAL JOURNE",
+    "New Rental Price":"$40.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"298",
+    "Course":"MUSC 110 - 5165",
+    "ISBN":"9780415808231",
+    "Title":"WORLD MUSIC:GLOBAL JOURNE",
+    "New Rental Price":"$40.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"299",
+    "Course":"MUSC 151 - 5185",
+    "ISBN":"9780393930818",
+    "Title":"MUSICIAN'S GUIDE TO THEOR",
+    "New Rental Price":"$71.18",
+    "Used Rental Price":"$37.05",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"300",
+    "Course":"MUSC 152 - 5187",
+    "ISBN":"9780393930818",
+    "Title":"MUSICIAN'S GUIDE TO THEOR",
+    "New Rental Price":"$71.18",
+    "Used Rental Price":"$37.05",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"301",
+    "Course":"MUSC 153 - 5189",
+    "ISBN":"9780393930818",
+    "Title":"MUSICIAN'S GUIDE TO THEOR",
+    "New Rental Price":"$71.18",
+    "Used Rental Price":"$37.05",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"302",
+    "Course":"MUSC 154 - 5191",
+    "ISBN":"9780393930818",
+    "Title":"MUSICIAN'S GUIDE TO THEOR",
+    "New Rental Price":"$71.18",
+    "Used Rental Price":"$37.05",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"303",
+    "Course":"MUSC 155 - 5193",
+    "ISBN":"9780393930818",
+    "Title":"MUSICIAN'S GUIDE TO THEOR",
+    "New Rental Price":"$71.18",
+    "Used Rental Price":"$37.05",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"304",
+    "Course":"NURS 101 - 3017",
+    "ISBN":"9780803623545",
+    "Title":"FUNDAMENTALS OF NURSING,V",
+    "New Rental Price":"$108.90",
+    "Used Rental Price":"$73.95",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"305",
+    "Course":"NURS 101 - 3017",
+    "ISBN":"9780803627826",
+    "Title":"NURSE'S POCKET GUIDE",
+    "New Rental Price":"$30.48",
+    "Used Rental Price":"$20.09",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"306",
+    "Course":"NURS 101 - 3017",
+    "ISBN":"9780803628137",
+    "Title":"MATERNAL-CHILD NURSING CA",
+    "New Rental Price":"$83.13",
+    "Used Rental Price":"$59.21",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"307",
+    "Course":"NURS 101 - 3017",
+    "ISBN":"9780803629776",
+    "Title":"CYCLOPEDIC MEDICAL DICTIO",
+    "New Rental Price":"$29.48",
+    "Used Rental Price":"$19.67",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"308",
+    "Course":"NURS 101 - 3017",
+    "ISBN":"9780803636644",
+    "Title":"DAVIS'S COMP.HDBK.OF LAB.",
+    "New Rental Price":"$41.45",
+    "Used Rental Price":"$29.26",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"309",
+    "Course":"NURS 101 - 3017",
+    "ISBN":"9780944583104",
+    "Title":"MINIATURE GUIDE TO CRITIC",
+    "New Rental Price":"$14.08",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"310",
+    "Course":"NURS 102 - 3019",
+    "ISBN":"9781437727999",
+    "Title":"MEDICAL-SURGICAL NURSING",
+    "New Rental Price":"$117.71",
+    "Used Rental Price":"$81.42",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"311",
+    "Course":"NURS 102 - 3019",
+    "ISBN":"9781455753581",
+    "Title":"FOUND.OF PSYCH.MENTAL HEA",
+    "New Rental Price":"$63.02",
+    "Used Rental Price":"$41.47",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"312",
+    "Course":"NURS 201 - 3031",
+    "ISBN":"9780803623545",
+    "Title":"FUNDAMENTALS OF NURSING,V",
+    "New Rental Price":"$108.90",
+    "Used Rental Price":"$73.95",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"313",
+    "Course":"NURS 201 - 3031",
+    "ISBN":"9780803627826",
+    "Title":"NURSE'S POCKET GUIDE",
+    "New Rental Price":"$30.48",
+    "Used Rental Price":"$20.09",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"314",
+    "Course":"NURS 201 - 3031",
+    "ISBN":"9780803629776",
+    "Title":"CYCLOPEDIC MEDICAL DICTIO",
+    "New Rental Price":"$29.48",
+    "Used Rental Price":"$19.67",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"315",
+    "Course":"NURS 201 - 3031",
+    "ISBN":"9780803636644",
+    "Title":"DAVIS'S COMP.HDBK.OF LAB.",
+    "New Rental Price":"$41.45",
+    "Used Rental Price":"$29.26",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"316",
+    "Course":"NURS 201 - 3031",
+    "ISBN":"9781437727999",
+    "Title":"MEDICAL-SURGICAL NURSING",
+    "New Rental Price":"$117.71",
+    "Used Rental Price":"$81.42",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"317",
+    "Course":"NURS 201 - 3031",
+    "ISBN":"9781455753581",
+    "Title":"FOUND.OF PSYCH.MENTAL HEA",
+    "New Rental Price":"$63.02",
+    "Used Rental Price":"$41.47",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"318",
+    "Course":"NURS 202 - 3033",
+    "ISBN":"9780803628137",
+    "Title":"MATERNAL-CHILD NURSING CA",
+    "New Rental Price":"$83.13",
+    "Used Rental Price":"$59.21",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"319",
+    "Course":"NURS 224 3043",
+    "ISBN":"9781608310753",
+    "Title":"TRANSCULTURAL CONCEPTS IN",
+    "New Rental Price":"$41.24",
+    "Used Rental Price":"$23.63",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"320",
+    "Course":"NUTR&amp; 101 - 3329",
+    "ISBN":"9781133603184",
+    "Title":"NUTRITION",
+    "New Rental Price":"$87.64",
+    "Used Rental Price":"$65.83",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"321",
+    "Course":"NUTR&amp; 101 - 3331",
+    "ISBN":"9781133603184",
+    "Title":"NUTRITION",
+    "New Rental Price":"$87.64",
+    "Used Rental Price":"$65.83",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"322",
+    "Course":"NUTR&amp; 101 - 3333",
+    "ISBN":"9781133603184",
+    "Title":"NUTRITION",
+    "New Rental Price":"$87.64",
+    "Used Rental Price":"$65.83",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"323",
+    "Course":"NUTR&amp; 101 - 3335",
+    "ISBN":"9781133603184",
+    "Title":"NUTRITION",
+    "New Rental Price":"$87.64",
+    "Used Rental Price":"$65.83",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"324",
+    "Course":"NUTR&amp; 101 - 3337",
+    "ISBN":"9781133603184",
+    "Title":"NUTRITION",
+    "New Rental Price":"$87.64",
+    "Used Rental Price":"$65.83",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"325",
+    "Course":"NUTR&amp; 101 - 3339",
+    "ISBN":"9781133603184",
+    "Title":"NUTRITION",
+    "New Rental Price":"$87.64",
+    "Used Rental Price":"$65.83",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"326",
+    "Course":"NUTR&amp; 101 - 3341",
+    "ISBN":"9781133603184",
+    "Title":"NUTRITION",
+    "New Rental Price":"$87.64",
+    "Used Rental Price":"$65.83",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"327",
+    "Course":"OCEA&amp; 101 - 6095",
+    "ISBN":"9781111990848",
+    "Title":"OCEANOGRAPHY",
+    "New Rental Price":"$189.75",
+    "Used Rental Price":"$130.87",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"328",
+    "Course":"P E 100 - 3073",
+    "ISBN":"9780321774347",
+    "Title":"HEALTH: BASICS",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$25.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"329",
+    "Course":"P E 100 - 3075",
+    "ISBN":"9780321774347",
+    "Title":"HEALTH: BASICS",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$25.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"330",
+    "Course":"P E 100 - 3077",
+    "ISBN":"9780321774347",
+    "Title":"HEALTH: BASICS",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$25.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"331",
+    "Course":"P E 100 - 3079",
+    "ISBN":"9780321774347",
+    "Title":"HEALTH: BASICS",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$25.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"332",
+    "Course":"PFT 215 - 3249",
+    "ISBN":"9781931046305",
+    "Title":"MOVEMENT         (SOFT CO",
+    "New Rental Price":"$43.96",
+    "Used Rental Price":"$33.00",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"333",
+    "Course":"PFT 225 - 3251",
+    "ISBN":"9780736001632",
+    "Title":"HIGH-PERFORMANCE SPORTS C",
+    "New Rental Price":"$21.96",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"334",
+    "Course":"PFT 225 - 3251",
+    "ISBN":"9780736084154",
+    "Title":"NSCA'S ESSENTIALS OF PERS",
+    "New Rental Price":"$55.60",
+    "Used Rental Price":"$38.90",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"335",
+    "Course":"PFT 235 - 3255",
+    "ISBN":"9780736084154",
+    "Title":"NSCA'S ESSENTIALS OF PERS",
+    "New Rental Price":"$55.60",
+    "Used Rental Price":"$38.90",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"336",
+    "Course":"PHIL 110 - 4337",
+    "ISBN":"9780872209626",
+    "Title":"MORAL PHILOSOPHY:READER",
+    "New Rental Price":"$26.49",
+    "Used Rental Price":"$13.08",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"337",
+    "Course":"PHIL 115 - 4339",
+    "ISBN":"9780205063451",
+    "Title":"BECOMING A CRITICAL THINK",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$40.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"338",
+    "Course":"PHIL&amp; 101 - 4359",
+    "ISBN":"9781405124782",
+    "Title":"WESTERN PHILOSOPHY",
+    "New Rental Price":"$56.58",
+    "Used Rental Price":"$39.56",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"339",
+    "Course":"PHIL&amp; 101 - 4361",
+    "ISBN":"9781405124782",
+    "Title":"WESTERN PHILOSOPHY",
+    "New Rental Price":"$56.58",
+    "Used Rental Price":"$39.56",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"340",
+    "Course":"PHIL&amp; 101 - 4363",
+    "ISBN":"9780078038372",
+    "Title":"DOES THE CENTER HOLD?",
+    "New Rental Price":"$52.00",
+    "Used Rental Price":"$34.20",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"341",
+    "Course":"PHIL&amp; 101 - 4365",
+    "ISBN":"9780199765225",
+    "Title":"PHILOSOPHY HERE &amp; NOW",
+    "New Rental Price":"$45.00",
+    "Used Rental Price":"$35.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"342",
+    "Course":"PHIL&amp; 101 - 4367",
+    "ISBN":"9780199765225",
+    "Title":"PHILOSOPHY HERE &amp; NOW",
+    "New Rental Price":"$45.00",
+    "Used Rental Price":"$35.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"343",
+    "Course":"PHIL&amp; 120 - 4369",
+    "ISBN":"9781133163831",
+    "Title":"*CONCISE INTRO. TO LOGIC",
+    "New Rental Price":"$168.96",
+    "Used Rental Price":"$135.30",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"344",
+    "Course":"PHYS 202 - ALL",
+    "ISBN":"9780321961082",
+    "Title":"*PRINCIPLES &amp; PRACTICES O",
+    "New Rental Price":"$157.30",
+    "Used Rental Price":"$118.14",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"345",
+    "Course":"POL S 150 - 1232",
+    "ISBN":"9781483308111",
+    "Title":"GOVERNING STATES+LOCALITI",
+    "New Rental Price":"$59.74",
+    "Used Rental Price":"$41.44",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"346",
+    "Course":"POLS&amp; 200 - ALL",
+    "ISBN":"9781111311896",
+    "Title":"INTRO.TO LAW",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$60.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"347",
+    "Course":"POLS&amp; 200 - ALL",
+    "ISBN":"9781418080914",
+    "Title":"ORAN'S DICTIONARY OF THE",
+    "New Rental Price":"$41.14",
+    "Used Rental Price":"$18.81",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"348",
+    "Course":"POLS&amp; 202 - 1249",
+    "ISBN":"9781111341879",
+    "Title":"UNDERSTANDING AMERICAN GO",
+    "New Rental Price":"$183.48",
+    "Used Rental Price":"$112.64",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"349",
+    "Course":"POLS&amp; 202 - 1251",
+    "ISBN":"9781111341879",
+    "Title":"UNDERSTANDING AMERICAN GO",
+    "New Rental Price":"$183.48",
+    "Used Rental Price":"$112.64",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"350",
+    "Course":"POLS&amp; 202 - 1254",
+    "ISBN":"9780393921588",
+    "Title":"ENDURING DEBATE",
+    "New Rental Price":"$52.55",
+    "Used Rental Price":"$37.05",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"351",
+    "Course":"POLS&amp; 202 - 1255",
+    "ISBN":"9781285436388",
+    "Title":"AMERICAN GOVT.+POL.TODAY,",
+    "New Rental Price":"$46.40",
+    "Used Rental Price":"$31.64",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"352",
+    "Course":"POLS&amp; 204 - 1237",
+    "ISBN":"9780393912807",
+    "Title":"ESSEN READINGS IN COMPARA",
+    "New Rental Price":"$43.41",
+    "Used Rental Price":"$30.99",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"353",
+    "Course":"PSYC&amp; 100 - 1125",
+    "ISBN":"9781464164743",
+    "Title":"PSYCHOLOGY-DSM 5 UPDATED",
+    "New Rental Price":"$85.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"354",
+    "Course":"PSYC&amp; 100 - 1127",
+    "ISBN":"9781464164743",
+    "Title":"PSYCHOLOGY-DSM 5 UPDATED",
+    "New Rental Price":"$85.00",
+    "Used Rental Price":"N/A",
+
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"355",
+    "Course":"PSYC&amp; 100 -1129",
+    "ISBN":"9781464164743",
+    "Title":"PSYCHOLOGY-DSM 5 UPDATED",
+    "New Rental Price":"$85.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"356",
+    "Course":"PSYC&amp; 100 -1131",
+    "ISBN":"9781464164743",
+    "Title":"PSYCHOLOGY-DSM 5 UPDATED",
+    "New Rental Price":"$85.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"357",
+    "Course":"PSYC&amp; 100 - 1141",
+    "ISBN":"9781464164743",
+    "Title":"PSYCHOLOGY-DSM 5 UPDATED",
+    "New Rental Price":"$85.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"358",
+    "Course":"PSYC&amp; 100 - 1143",
+    "ISBN":"9781464164743",
+    "Title":"PSYCHOLOGY-DSM 5 UPDATED",
+    "New Rental Price":"$85.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"359",
+    "Course":"PSYC&amp; 100 - 1145",
+    "ISBN":"9781464164743",
+    "Title":"PSYCHOLOGY-DSM 5 UPDATED",
+    "New Rental Price":"$85.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"360",
+    "Course":"PSYC&amp; 100 - 1147",
+    "ISBN":"9781464164743",
+    "Title":"PSYCHOLOGY-DSM 5 UPDATED",
+    "New Rental Price":"$85.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"361",
+    "Course":"PSYC&amp; 180 - 1184",
+    "ISBN":"9781111835811",
+    "Title":"SEXUALITY NOW",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$70.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"362",
+    "Course":"PSYC&amp; 180 - 1186",
+    "ISBN":"9781111835811",
+    "Title":"SEXUALITY NOW",
+    "New Rental Price":"N/A",
+    "Used Rental Price":"$70.00",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"363",
+    "Course":"PSYC&amp; 180 -- 1188",
+    "ISBN":"9780078035395",
+    "Title":"UNDERSTANDING HUMAN SEXUA",
+    "New Rental Price":"$126.84",
+    "Used Rental Price":"$85.50",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"364",
+    "Course":"PSYC&amp; 200 - ALL",
+    "ISBN":"9781429283816",
+    "Title":"DEVEL.PERSON THROUGH LIFE",
+    "New Rental Price":"$122.77",
+    "Used Rental Price":"$83.36",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"365",
+    "Course":"PSYC&amp; 200 - ALL",
+    "ISBN":"9781464139796",
+    "Title":"DEVELOPING PERSON THROUGH LIFESPAN",
+    "New Rental Price":"$105.00",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store/Online"
+  },
+  {
+    "Book":"366",
+    "Course":"PSYCH 120 - ALL",
+    "ISBN":"9781285459950",
+    "Title":"PSYCH.APPLIED TO MOD.LIFE",
+    "New Rental Price":"$54.01",
+    "Used Rental Price":"$40.61",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"367",
+    "Course":"PSYCH 130 - 1173",
+    "ISBN":"9780078035463",
+    "Title":"LAST DANCE: ENCOUNTERING",
+    "New Rental Price":"$111.53",
+    "Used Rental Price":"$79.94",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"368",
+    "Course":"PSYCH 142 - 1177",
+    "ISBN":"9780345409461",
+    "Title":"DEMON-HAUNTED WORLD",
+    "New Rental Price":"$13.16",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"369",
+    "Course":"PSYCH 152 - 1179",
+    "ISBN":"9780073527680",
+    "Title":"AIDS UPDATE 2014",
+    "New Rental Price":"$74.34",
+    "Used Rental Price":"$51.57",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"370",
+    "Course":"PSYCH 220 - 1163",
+    "ISBN":"9781118018491",
+    "Title":"ABNORMAL PSYCHOLOGY",
+    "New Rental Price":"$156.20",
+    "Used Rental Price":"$112.42",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"371",
+    "Course":"READ 81 - 1341",
+    "ISBN":"9781591944232",
+    "Title":"TEN STEPS TO IMPROVING CO",
+    "New Rental Price":"$26.08",
+    "Used Rental Price":"$18.85",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"372",
+    "Course":"READ 91 - 1414",
+    "ISBN":"9781591944348",
+    "Title":"TEN STEPS TO ADVANCING CO",
+    "New Rental Price":"$29.15",
+    "Used Rental Price":"$20.41",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"373",
+    "Course":"READ 91 - 1416",
+    "ISBN":"9781591944348",
+    "Title":"TEN STEPS TO ADVANCING CO",
+    "New Rental Price":"$29.15",
+    "Used Rental Price":"$20.41",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"374",
+    "Course":"READ 95  - 1357 ",
+    "ISBN":"9780205211906",
+    "Title":"ACTIVE VOCABULARY",
+    "New Rental Price":"$28.38",
+    "Used Rental Price":"$21.34",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"375",
+    "Course":"READ 100 - 1434",
+    "ISBN":"9780547126593",
+    "Title":"BECOMING A MASTER STUDENT",
+    "New Rental Price":"$25.96",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"376",
+    "Course":"READ 105 - 1360",
+    "ISBN":"9780205211852",
+    "Title":"ACADEMIC VOCABULARY",
+    "New Rental Price":"$28.38",
+    "Used Rental Price":"$21.34",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"377",
+    "Course":"REWRI 81 - 1866",
+    "ISBN":"9781591944232",
+    "Title":"TEN STEPS TO IMPROVING CO",
+    "New Rental Price":"$26.08",
+    "Used Rental Price":"$18.85",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"378",
+    "Course":"REWRI 81 - 1868",
+    "ISBN":"9781285430775",
+    "Title":"GRASSROOTS W/READINGS:WRI",
+    "New Rental Price":"$70.85",
+    "Used Rental Price":"$49.25",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"379",
+    "Course":"REWRI 81 - 1868",
+    "ISBN":"9781591944232",
+    "Title":"TEN STEPS TO IMPROVING CO",
+    "New Rental Price":"$26.08",
+    "Used Rental Price":"$18.85",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"380",
+    "Course":"SAPC 102 -9141",
+    "ISBN":"9780735669116",
+    "Title":"MICROSOFT PROJECT 2013 ST",
+    "New Rental Price":"$19.49",
+    "Used Rental Price":"$13.73",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"381",
+    "Course":"SAPC 102 -9141",
+    "ISBN":"9780982800331",
+    "Title":"INTRO TO PROJECT MANAGEME",
+    "New Rental Price":"$67.76",
+    "Used Rental Price":"$23.54",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"382",
+    "Course":"SAPC 102 -9632",
+    "ISBN":"9780817432256",
+    "Title":"UNDERSTANDING PHOTOGRAPHY",
+    "New Rental Price":"$19.89",
+    "Used Rental Price":"$14.15",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"383",
+    "Course":"SDBC 108 - 9615",
+    "ISBN":"9780936799209",
+    "Title":"HAWAIIAN SLACK KEY GUITAR",
+    "New Rental Price":"$16.28",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"384",
+    "Course":"SDBC 108 - 9615",
+    "ISBN":"9780786641093",
+    "Title":"LEARNING TO PLAY HAWAIIAN",
+    "New Rental Price":"$16.06",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"385",
+    "Course":"SDBC 108 - 9615",
+    "ISBN":"9780786658930",
+    "Title":"PLAYING GUITAR HAWAIIAN S",
+    "New Rental Price":"$21.96",
+    "Used Rental Price":"$16.50",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"386",
+    "Course":"SDBC 112 - 9617",
+    "ISBN":"9780697104373",
+    "Title":"PRACTICAL PIANO SKILLS-W/",
+    "New Rental Price":"$99.88",
+    "Used Rental Price":"$36.66",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"387",
+    "Course":"SDBC 112 - 9619",
+    "ISBN":"9780634014154",
+    "Title":"CONTEMPORARY CLASS GUITAR",
+    "New Rental Price":"$17.59",
+    "Used Rental Price":"$13.20",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"388",
+    "Course":"SFRC 101 - 9643",
+    "ISBN":"9780757000072",
+    "Title":"TALKING W/YOUR HANDS,LIST",
+    "New Rental Price":"$14.14",
+    "Used Rental Price":"$9.75",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"389",
+    "Course":"SOC&amp; 101 -1307",
+    "ISBN":"9780078026874",
+    "Title":"PRACTICAL SKEPTIC: CORE C",
+    "New Rental Price":"$59.30",
+    "Used Rental Price":"$31.89",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"390",
+    "Course":"SOC&amp; 101 - 1311",
+    "ISBN":"9780393912708",
+    "Title":"READINGS F/SOCIOLOGY-T/A",
+    "New Rental Price":"$39.00",
+    "Used Rental Price":"$18.67",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"391",
+    "Course":"SOC&amp; 101 - 1311  ",
+    "ISBN":"9780393918830",
+    "Title":"ESSENTIALS OF SOCIOLOGY",
+    "New Rental Price":"$86.90",
+    "Used Rental Price":"$65.34",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"392",
+    "Course":"SOC&amp; 101 - 1315",
+    "ISBN":"9780078026874",
+    "Title":"PRACTICAL SKEPTIC: CORE C",
+    "New Rental Price":"$59.30",
+    "Used Rental Price":"$31.89",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"393",
+    "Course":"SOC&amp; 101 - 1315",
+    "ISBN":"9780385484510",
+    "Title":"TUESDAYS WITH MORRIE:AN O",
+    "New Rental Price":"$21.08",
+    "Used Rental Price":"N/A",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"394",
+    "Course":"SOC&amp; 201 - 1323",
+    "ISBN":"9780495504283",
+    "Title":"UNDERSTANDING SOCIAL PROB",
+    "New Rental Price":"$124.30",
+    "Used Rental Price":"$35.16",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"395",
+    "Course":"SPAN&amp; 121 - 5299",
+    "ISBN":"9780205950331",
+    "Title":"UNIDOS  -TEXT ONLY",
+    "New Rental Price":"$112.64",
+    "Used Rental Price":"$84.48",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"396",
+    "Course":"SPAN&amp; 121 - 5301",
+    "ISBN":"9780205950331",
+    "Title":"UNIDOS  -TEXT ONLY",
+    "New Rental Price":"$112.64",
+    "Used Rental Price":"$84.48",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"397",
+    "Course":"SPAN&amp; 122 - 5299",
+    "ISBN":"9780205950331",
+    "Title":"UNIDOS  -TEXT ONLY",
+    "New Rental Price":"$112.64",
+    "Used Rental Price":"$84.48",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"398",
+    "Course":"SPAN&amp; 122 - 5301",
+    "ISBN":"9780205950331",
+    "Title":"UNIDOS  -TEXT ONLY",
+    "New Rental Price":"$112.64",
+    "Used Rental Price":"$84.48",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"399",
+    "Course":"SPAN&amp; 221 - 5311",
+    "ISBN":"9780470588987",
+    "Title":"NUEVOS MUNDOS",
+    "New Rental Price":"$68.58",
+    "Used Rental Price":"$46.75",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"400",
+    "Course":"SVCW 134 - 9143",
+    "ISBN":"9781932735659",
+    "Title":"PMP EXAM PREP",
+    "New Rental Price":"$61.19",
+    "Used Rental Price":"$43.51",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"401",
+    "Course":"SVCW 134 - 9143",
+    "ISBN":"9781933890517",
+    "Title":"GUIDE TO PROJECT MGMT.BOD",
+    "New Rental Price":"$49.32",
+    "Used Rental Price":"$25.52",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"402",
+    "Course":"VICOM 100 - 5325",
+    "ISBN":"9781118640159",
+    "Title":"DREAMWEAVER CC DIGITAL CL",
+    "New Rental Price":"$27.97",
+    "Used Rental Price":"$19.50",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"403",
+    "Course":"VICOM 100 - 5325",
+    "ISBN":"9781118991237",
+    "Title":"TEACH YOURSELF VISUALLY O",
+    "New Rental Price":"$26.39",
+    "Used Rental Price":"$19.80",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"404",
+    "Course":"VICOM 110 - 5327",
+    "ISBN":"9781133945529",
+    "Title":"GRAPHIC DESIGN SOLUTIONS",
+    "New Rental Price":"$91.75",
+    "Used Rental Price":"$66.55",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"405",
+    "Course":"VICOM 120 - 5329",
+    "ISBN":"9781133945529",
+    "Title":"GRAPHIC DESIGN SOLUTIONS",
+    "New Rental Price":"$91.75",
+    "Used Rental Price":"$66.55",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"406",
+    "Course":"VICOM 153 - 5335",
+    "ISBN":"9780470542514",
+    "Title":"TYPE RULES!",
+    "New Rental Price":"$48.40",
+    "Used Rental Price":"$17.60",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"407",
+    "Course":"VICOM 228 - 5337",
+    "ISBN":"9780789751638",
+    "Title":"ADOBE INDESIGN CC ON DEMA",
+    "New Rental Price":"$31.36",
+    "Used Rental Price":"$22.17",
+    "Availability":"In-store"
+  },
+  {
+    "Book":"408",
+    "Course":"VICOM 230 - 5339",
+    "ISBN":"9781118639566",
+    "Title":"PHOTOSHOP CC DIGITAL CLAS",
+    "New Rental Price":"$32.47",
+    "Used Rental Price":"$22.82",
+    "Availability":"In-store"
+  }
+]
+
+$(document).on("pageinit", "#info-page", function () {
+    var li = "";
+    $.each(info, function (i, Course) {
+        li += '<li><a href="#" id="' + i + '" class="info-go">' + Course.Course + '</a></li>';
+    });
+    $("#prof-list").append(li).promise().done(function () {
+        $(this).on("click", ".info-go", function (e) {
+            e.preventDefault();
+            $("#details-page").data("info", info[this.id]);
+            $.mobile.changePage("#details-page");
+        });
+        $(this).listview("refresh");
+    });
+
+$(document).on("pagebeforeshow", "#details-page", function () {
+    var info = $(this).data("info");
+    var info_view = "";
+    for (var key in info) {
+        info_view += '<div class="ui-grid-a"><div class="ui-block-a"><div class="ui-bar field" style="font-weight : bold; text-align: left;">' + key + '</div></div><div class="ui-block-b"><div class="ui-bar value" style="width : 75%">' + info[key] + '</div></div></div>';
+    }
+    $(this).find("[data-role=content]").html(info_view);
+});
+});
+</script>
+
+<!--first page -->
+<div data-role="page" id="info-page">
+    <div data-role="header" data-theme="a">
+         <h1>Rental Books</h1>
+    </div>
+    <div id="wrapper">
+    <div data-role="content">
+        <ul data-role="listview" id="prof-list" data-divider-theme="a" data-inset="true"  data-filter="true">
+            <li data-role="list-divider" data-theme="a"></li>
+        </ul>
+    </div>
+<div data-role="footer" data-id="foo" data-theme="a" data-position="fixed">
+  <div data-role="navbar">
+
+<ul>
+<li><a href="http://bkstore.highline.edu/mobile/index.html" rel="external" data-prefetch="true"><img src="http://bkstore.highline.edu/mobile/images/Homewhite.png" width="25" height="25" alt="Link to main page"><br />Home</a></li>
+
+<li><a href="http://bkstore.highline.edu/mobile/information.html" rel="external" data-prefetch="true"><img src="http://bkstore.highline.edu/mobile/images/Filewhite.png" width="25" height="25" alt="Link to information page"><br />Info</a></li>
+
+<li><a href="http://bkstore.highline.edu/mobile/hours.html" rel="external" data-prefetch="true"><img src="http://bkstore.highline.edu/mobile/images/Clockwhite.png" width="25" height="25" alt="Link to hours page"><br />Hours</a></li>
+
+<li><a href="http://bkstore.highline.edu/mobile/books.html" rel="external" data-prefetch="true"  class="ui-btn-up-b ui-state-persist"><img src="http://bkstore.highline.edu/mobile/images/Bookswhite.png" width="25" height="25" alt="Link to books page"><br />Books</a></li>
+</ul>
+</div> <!--navbar-->
+</div> <!--footer-->
+</div> <!--content-->
+</div> <!--wrapper-->
+
+<!--second page -->
+<div data-role="page" id="details-page">
+    <div data-role="header" data-theme="a"><a href="#" data-rel="back" data-role="button">Back</a>
+    <h1>&nbsp;</h1>
+    </div>
+<div data-role="content"></div>
+<div data-role="footer" data-id="foo" data-theme="a" data-position="fixed">
+  <div data-role="navbar">
+
+<ul>
+<li><a href="http://bkstore.highline.edu/mobile/index.html" rel="external" data-prefetch="true"><img src="http://bkstore.highline.edu/mobile/images/Homewhite.png" width="25" height="25" alt="Link to main page"><br />Home</a></li>
+
+<li><a href="http://bkstore.highline.edu/mobile/information.html" rel="external" data-prefetch="true"><img src="http://bkstore.highline.edu/mobile/images/Filewhite.png" width="25" height="25" alt="Link to information page"><br />Info</a></li>
+
+<li><a href="http://bkstore.highline.edu/mobile/hours.html" rel="external" data-prefetch="true"><img src="http://bkstore.highline.edu/mobile/images/Clockwhite.png" width="25" height="25" alt="Link to hours page"><br />Hours</a></li>
+
+<li><a href="http://bkstore.highline.edu/mobile/books.html" rel="external" data-prefetch="true"  class="ui-btn-up-b ui-state-persist"><img src="http://bkstore.highline.edu/mobile/images/Bookswhite.png" width="25" height="25" alt="Link to books page"><br />Books</a></li>
+</ul>
+</div> <!--navbar-->
+</div> <!--footer-->
+</div> <!--page-->
+</body>
+</html>
